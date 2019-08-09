@@ -1,0 +1,10 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+
+repositories {
+    mavenCentral()
+}
+dependencies{
+    compile 'com.slickqa:testng:7.0.0-7'
+}
