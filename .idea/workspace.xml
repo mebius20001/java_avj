@@ -53,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contacts-web-tests/src/test/java/trs/stqa/pft/contacts/ContactCreationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="242">
+              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#687#688#0" expanded="true" />
@@ -305,12 +305,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GroupCreationTests - 2019.08.09 at 00h 26m 08s.xml">
-      <configuration name="GroupCreationTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="GroupCreationTests_(2) - 2019.08.09 at 01h 23m 35s.xml">
-      <configuration name="GroupCreationTests (2)" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="GroupCreationTests_(1) - 2019.08.09 at 01h 24m 02s.xml">
       <configuration name="GroupCreationTests (1)" configurationId="TestNG" />
     </history-entry>
@@ -333,6 +327,12 @@
       <configuration name="ContactCreationTests.contactGroupCreation" configurationId="TestNG" />
     </history-entry>
     <history-entry file="ContactCreationTests_testContactCreation - 2019.08.09 at 01h 37m 05s.xml">
+      <configuration name="ContactCreationTests.testContactCreation" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ContactCreationTests_testContactCreation - 2019.08.09 at 14h 01m 14s.xml">
+      <configuration name="ContactCreationTests.testContactCreation" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ContactCreationTests_testContactCreation - 2019.08.09 at 14h 19m 52s.xml">
       <configuration name="ContactCreationTests.testContactCreation" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -481,8 +481,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contacts-web-tests/src/test/java/trs/stqa/pft/contacts/ContactCreationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="242">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#687#688#0" expanded="true" />
