@@ -1,9 +1,10 @@
-package trs.stqa.pft.addressbook;
+package trs.stqa.pft.addressbook.tests;
 
 
 
 import org.testng.annotations.*;
 import org.openqa.selenium.*;
+import trs.stqa.pft.addressbook.model.GroupData;
 
 
 public class GroupCreationTests extends TestBase {
