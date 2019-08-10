@@ -12,12 +12,12 @@ public class GroupCreationTests extends TestBase {
   @Test
   public void testGroupCreation() throws Exception {
 
-    gotoGroupPage();
-    initGroupCreation();
-    fillGroupForm(new GroupData("test_group", "test1", "test2"));
-    submitGroupCreation();
-    gotoGroupPage();
-    wd.findElement(By.linkText("Logout")).click();
+    app.gotoGroupPage();
+    app.initGroupCreation();
+    app.fillGroupForm(new GroupData("test_group", "test1", "test2"));
+    app.submitGroupCreation();
+    app.gotoGroupPage();
+    app.wd.findElement(By.linkText("Logout")).click();
   }
 
 
