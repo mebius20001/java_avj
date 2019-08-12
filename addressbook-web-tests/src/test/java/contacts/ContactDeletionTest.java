@@ -5,7 +5,7 @@ import org.testng.annotations.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class ContactDeletionTest {
+public class ContactDeletionTest  {
   private WebDriver wd;
 
 
