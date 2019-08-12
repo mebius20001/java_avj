@@ -1,4 +1,4 @@
-package trs.stqa.pft.contacts;
+package contacts;
 
 public class GroupData {
   private final String firstname;

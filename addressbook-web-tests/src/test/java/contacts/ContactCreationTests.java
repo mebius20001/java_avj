@@ -1,4 +1,4 @@
-package trs.stqa.pft.contacts;
+package contacts;
 
 import java.util.concurrent.TimeUnit;
 import org.testng.annotations.*;
