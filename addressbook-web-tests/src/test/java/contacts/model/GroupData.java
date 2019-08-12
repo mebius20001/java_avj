@@ -1,4 +1,4 @@
-package contacts;
+package contacts.model;
 
 public class GroupData {
   private final String firstname;

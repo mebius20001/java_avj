@@ -1,39 +1,37 @@
-package contacts;
+package contacts.appmanager;
 
+import contacts.model.GroupData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestBase {
+public class ApplicationManager {
   public WebDriver wd;
 
-  @BeforeMethod(alwaysRun = true)
-  public void setUp() throws Exception {
+  public void init() {
     wd = new FirefoxDriver();
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     wd.get("http://localhost/addressbook/");
     login("admin", "secret");
   }
 
-  protected void logout() {
+  public void logout() {
     wd.findElement(By.linkText("Logout")).click();
   }
 
-  protected void returnToHomePage() {
+  public void returnToHomePage() {
     wd.findElement(By.linkText("home")).click();
   }
 
-  protected void submitContactCreation() {
+  public void submitContactCreation() {
     wd.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
   }
 
-  protected void fillContactForm(GroupData groupData) {
+  public void fillContactForm(GroupData groupData) {
     wd.findElement(By.name("firstname")).clear();
     wd.findElement(By.name("firstname")).sendKeys(groupData.getFirstname());
     wd.findElement(By.name("middlename")).clear();
@@ -49,7 +47,7 @@ public class TestBase {
     wd.findElement(By.name("email")).sendKeys(groupData.getEmail());
   }
 
-  protected void initContactCreation() {
+  public void initContactCreation() {
     wd.findElement(By.linkText("add new")).click();
   }
 
@@ -62,10 +60,8 @@ public class TestBase {
     wd.findElement(By.id("LoginForm")).submit();
   }
 
-  @AfterMethod(alwaysRun = true)
-  public void tearDown() throws Exception {
+  public void stop() {
     wd.quit();
-
   }
 
   private boolean isElementPresent(By by) {
@@ -86,15 +82,15 @@ public class TestBase {
     }
   }
 
-  protected void closeAlertWindow() {
+  public void closeAlertWindow() {
     wd.switchTo().alert().accept();
   }
 
-  protected void deleteSelectedContacts() {
+  public void deleteSelectedContacts() {
     wd.findElement(By.xpath("//input[@value='Delete']")).click();
   }
 
-  protected void selectContact() {
+  public void selectContact() {
     wd.findElement(By.name("selected[]")).click();
   }
 }
