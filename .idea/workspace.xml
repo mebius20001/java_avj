@@ -53,8 +53,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/contacts/ContactCreationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="2" selection-end-column="17" />
+            <state relative-caret-position="88">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/contacts/ContactDeletionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="31" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -71,7 +80,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/contacts/TestBase.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-198">
@@ -128,10 +137,10 @@
         <option value="$PROJECT_DIR$/addressbook-web-tests/src/test/java/trs/stqa/pft/addressbook/appmanager/GroupHelper.java" />
         <option value="$PROJECT_DIR$/addressbook-web-tests/src/test/java/trs/stqa/pft/addressbook/appmanager/SessionHelper.java" />
         <option value="$PROJECT_DIR$/addressbook-web-tests/src/test/java/trs/stqa/pft/addressbook/appmanager/NavigationHelper.java" />
-        <option value="$PROJECT_DIR$/addressbook-web-tests/src/test/java/contacts/ContactDeletionTest.java" />
         <option value="$PROJECT_DIR$/addressbook-web-tests/src/test/java/contacts/TestBase.java" />
         <option value="$PROJECT_DIR$/addressbook-web-tests/src/test/java/contacts/ContactCreationTests.java" />
         <option value="$PROJECT_DIR$/addressbook-web-tests/src/test/java/contacts/TestBase2.java" />
+        <option value="$PROJECT_DIR$/addressbook-web-tests/src/test/java/contacts/ContactDeletionTest.java" />
       </list>
     </option>
   </component>
@@ -243,7 +252,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ContactCreationTests (1)">
+  <component name="RunManager" selected="TestNG.GroupCreationTests">
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <module name="contacts-web-tests" />
       <option name="VM_PARAMETERS" />
@@ -329,12 +338,29 @@
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="contacts.TestBase" />
+          <option name="PATTERN" value="contacts.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="contacts" />
       <option name="MAIN_CLASS_NAME" value="contacts.ContactDeletionTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactDeletionTest2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="contacts.TestBase" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="contacts" />
+      <option name="MAIN_CLASS_NAME" value="contacts.ContactDeletionTest2" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -411,11 +437,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="TestNG.ContactCreationTests (1)" />
         <item itemvalue="TestNG.ContactDeletionTest" />
-        <item itemvalue="TestNG.GroupCreationTests" />
+        <item itemvalue="TestNG.ContactDeletionTest2" />
         <item itemvalue="TestNG.GroupDeletionTests" />
-        <item itemvalue="TestNG.ContactCreationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -433,9 +459,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ContactDeletionTest - 2019.08.12 at 01h 52m 45s.xml">
-      <configuration name="ContactDeletionTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="ContactDeletionTest - 2019.08.12 at 01h 53m 34s.xml">
       <configuration name="ContactDeletionTest" configurationId="TestNG" />
     </history-entry>
@@ -463,9 +486,13 @@
     <history-entry file="ContactCreationTests - 2019.08.12 at 11h 19m 03s.xml">
       <configuration name="ContactCreationTests" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="ContactCreationTests - 2019.08.12 at 11h 49m 54s.xml">
+      <configuration name="ContactCreationTests" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="840" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33557048" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -674,16 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/contacts/ContactDeletionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/trs/stqa/pft/addressbook/tests/TestBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -691,13 +708,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/contacts/ContactCreationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -716,6 +726,30 @@
             <element signature="e#1841#1842#0" expanded="true" />
             <element signature="e#1897#1898#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/contacts/ContactCreationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/contacts/ContactDeletionTest2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-638">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/contacts/ContactDeletionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="31" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
         </state>
       </provider>
     </entry>
