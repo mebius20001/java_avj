@@ -1,6 +1,6 @@
 package trs.stqa.pft.addressbook.tests;
-import org.testng.annotations.*;
-import org.openqa.selenium.*;
+
+import org.testng.annotations.Test;
 import trs.stqa.pft.addressbook.model.GroupData;
 
 
