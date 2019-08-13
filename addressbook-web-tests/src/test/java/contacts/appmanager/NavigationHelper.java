@@ -3,16 +3,13 @@ package contacts.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class NavigationHelper {
+public class NavigationHelper extends HelperBase {
 
-  private FirefoxDriver wd;
-
-  public NavigationHelper(FirefoxDriver wd) {
-    this.wd = wd;
+    public NavigationHelper(FirefoxDriver wd) {
+    super(wd);
   }
-  //public FirefoxDriver wd;
 
   public void goToHomePage() {
-    wd.findElement(By.linkText("home")).click();
+   click(By.linkText("home"));
   }
 }

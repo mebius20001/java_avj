@@ -1,7 +1,6 @@
 package contacts.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -30,8 +29,6 @@ public class ApplicationManager {
     wd.findElement(By.linkText("Logout")).click();
   }
 
-
-
   public void stop() {
     wd.quit();
   }
@@ -41,15 +38,6 @@ public class ApplicationManager {
       wd.findElement(by);
       return true;
     } catch (NoSuchElementException e) {
-      return false;
-    }
-  }
-
-  private boolean isAlertPresent() {
-    try {
-      wd.switchTo().alert();
-      return true;
-    } catch (NoAlertPresentException e) {
       return false;
     }
   }
@@ -65,4 +53,5 @@ public class ApplicationManager {
   public NavigationHelper getNavigationHelper() {
     return navigationHelper;
   }
+
 }
