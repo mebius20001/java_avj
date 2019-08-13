@@ -12,7 +12,7 @@ public class ContactCreationTests extends TestBase {
     app.getGroupHelper().initContactCreation();
     app.getGroupHelper().fillContactForm(new GroupData("Ivan", "Ivanovich", "Petrov", "21 E Mossovet str", "123456789", "abc@job.com"));
     app.getGroupHelper().submitContactCreation();
-    app.goToHomePage();
+    app.getNavigationHelper().goToHomePage();
     app.logout();
   }
 
