@@ -1,6 +1,6 @@
 package contacts.appmanager;
 
-import contacts.model.GroupData;
+import contacts.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -14,7 +14,7 @@ public class GroupHelper extends HelperBase {
     click(By.xpath("(//input[@name='submit'])[2]"));
   }
 
-  public void fillContactForm(GroupData groupData) {
+  public void fillContactForm(ContactData groupData) {
     type(By.name("firstname"), groupData.getFirstname());
     type(By.name("middlename"), groupData.getMiddlename());
     type(By.name("lastname"), groupData.getLastname());

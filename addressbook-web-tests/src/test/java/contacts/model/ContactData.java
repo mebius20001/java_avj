@@ -1,6 +1,6 @@
 package contacts.model;
 
-public class GroupData {
+public class ContactData {
   private final String firstname;
   private final String middlename;
   private final String lastname;
@@ -8,7 +8,7 @@ public class GroupData {
   private final String homePhone;
   private final String email;
 
-  public GroupData(String firstname, String middlename, String lastname, String address, String homePhone, String email) {
+  public ContactData(String firstname, String middlename, String lastname, String address, String homePhone, String email) {
     this.firstname = firstname;
     this.middlename = middlename;
     this.lastname = lastname;
