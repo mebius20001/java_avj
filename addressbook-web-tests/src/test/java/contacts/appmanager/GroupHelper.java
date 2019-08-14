@@ -1,6 +1,6 @@
 package contacts.appmanager;
 
-import contacts.model.ContactData;
+import trs.stqa.pft.addressbook.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
