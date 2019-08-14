@@ -1,13 +1,13 @@
-package contacts.appmanager;
+package trs.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class HelperBase {
+public class HelperBase2 {
   protected FirefoxDriver wd;
 
-  public HelperBase(FirefoxDriver wd) {
+  public HelperBase2(FirefoxDriver wd) {
     this.wd = wd;
   }
 

@@ -1,12 +1,12 @@
-package contacts.appmanager;
+package trs.stqa.pft.addressbook.appmanager;
 
 import trs.stqa.pft.addressbook.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class GroupHelper extends HelperBase {
+public class GroupHelper2 extends HelperBase2 {
 
-  public GroupHelper(FirefoxDriver wd) {
+  public GroupHelper2(FirefoxDriver wd) {
     super(wd);
   }
 

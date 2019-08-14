@@ -1,11 +1,11 @@
-package contacts.appmanager;
+package trs.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class NavigationHelper extends HelperBase {
+public class NavigationHelper2 extends HelperBase2 {
 
-    public NavigationHelper(FirefoxDriver wd) {
+    public NavigationHelper2(FirefoxDriver wd) {
     super(wd);
   }
 

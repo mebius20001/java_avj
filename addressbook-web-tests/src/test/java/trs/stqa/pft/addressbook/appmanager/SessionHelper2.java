@@ -1,12 +1,12 @@
-package contacts.appmanager;
+package trs.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class SessionHelper extends HelperBase {
+public class SessionHelper2 extends HelperBase2 {
 
 
-  public SessionHelper(FirefoxDriver wd) {
+  public SessionHelper2(FirefoxDriver wd) {
 
     super(wd);
   }

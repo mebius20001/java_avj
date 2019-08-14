@@ -1,12 +1,12 @@
-package contacts.tests;
+package trs.stqa.pft.addressbook.tests;
 
-import contacts.appmanager.ApplicationManager;
+import trs.stqa.pft.addressbook.appmanager.ApplicationManager2;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-public class TestBase {
+public class TestBase2 {
 
-  protected final ApplicationManager app = new ApplicationManager();
+  protected final ApplicationManager2 app = new ApplicationManager2();
 
   @BeforeMethod(alwaysRun = true)
   public void setUp() throws Exception {
@@ -19,7 +19,7 @@ public class TestBase {
 
   }
 
-  public ApplicationManager getApp() {
+  public ApplicationManager2 getApp() {
     return app;
   }
 }
