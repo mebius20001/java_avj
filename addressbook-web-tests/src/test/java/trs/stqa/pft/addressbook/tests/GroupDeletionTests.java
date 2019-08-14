@@ -1,4 +1,4 @@
-package trs.stqa.pft.addressbook.appmanager;
+package trs.stqa.pft.addressbook.tests;
 
 import org.testng.annotations.*;
 import trs.stqa.pft.addressbook.tests.TestBase;
