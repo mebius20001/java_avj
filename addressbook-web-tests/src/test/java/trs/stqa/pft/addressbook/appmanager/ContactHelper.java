@@ -2,32 +2,43 @@ package trs.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import trs.stqa.pft.addressbook.model.ContactData;
 
 public class ContactHelper extends HelperBase{
 
   public ContactHelper(WebDriver wd) {
-
     super(wd);
   }
 
 
   public void submitContactCreation() {
+
     click(By.xpath("(//input[@name='submit'])[2]"));
+
   }
 
-  public void fillContactForm(ContactData groupData) {
-    type(By.name("firstname"), groupData.getFirstname());
-    type(By.name("middlename"), groupData.getMiddlename());
-    type(By.name("lastname"), groupData.getLastname());
-    type(By.name("address"), groupData.getAddress());
-    type(By.name("home"), groupData.getHomePhone());
-    click(By.name("email"));
-    type(By.name("email"), groupData.getEmail());
+  public void fillContactForm(ContactData contactData, boolean creation) {
+    type(By.name("firstname"), contactData.getFirstname());
+    type(By.name("middlename"), contactData.getMiddlename());
+    type(By.name("lastname"), contactData.getLastname());
+    type(By.name("address"), contactData.getAddress());
+    type(By.name("home"), contactData.getHomePhone());
+    type(By.name("email"), contactData.getEmail());
+   // type(By.name("group"), contactData.getGroup());
+
+   if (creation){
+      new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(ContactData.getGroup());
+    } else {
+      Assert.assertFalse(isElementPresent(By.name("test_group")));
+    }
+
   }
 
   public void initContactCreation() {
-    click(By.linkText("add new"));
+      click(By.linkText("add new"));
+
   }
 
   public void deleteSelectedContacts() {
