@@ -3,6 +3,8 @@ package trs.stqa.pft.addressbook.tests;
 import org.testng.annotations.Test;
 import trs.stqa.pft.addressbook.model.ContactData;
 
+import java.util.List;
+
 public class ContactModificationTests extends TestBase {
 
   @Test
@@ -15,13 +17,15 @@ public class ContactModificationTests extends TestBase {
       app.getContactHelper().submitContactCreation();
       app.getNavigationHelper().goToHomePage();
     }
+    List<ContactData> before = app.getContactHelper().getContactList();
 
-    app.getContactHelper().selectContact();
+    app.getContactHelper().selectContact(before.size() -1);
     app.getContactHelper().initContactModification();
     app.getContactHelper().fillContactForm(new ContactData("Ivan", "Ivanovich", "Petrov" ,"21 E Mossovet str", "123456789", "abc@job.com", null),false);
     app.getContactHelper().submitContactModification();
     app.getNavigationHelper().goToHomePage();
 
+    List<ContactData> after = app.getContactHelper().getContactList();
 
   }
 }
