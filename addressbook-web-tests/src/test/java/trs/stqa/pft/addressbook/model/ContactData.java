@@ -3,7 +3,6 @@ package trs.stqa.pft.addressbook.model;
 import java.util.Objects;
 
 public class ContactData {
-  private  int id;
   private static String group;
   private final String firstname;
   private final String middlename;
@@ -13,7 +12,6 @@ public class ContactData {
   private final String email;
 
   public ContactData(String firstname,  String middlename, String lastname, String address, String homePhone, String email, String group) {
-    this.id = Integer.MAX_VALUE;
     this.firstname = firstname;
     this.group = group;
     this.middlename = middlename;
@@ -23,16 +21,6 @@ public class ContactData {
     this.email = email;
   }
 
-  public ContactData(int id, String firstname,  String middlename, String lastname, String address, String homePhone, String email, String group) {
-    this.id = id;
-    this.firstname = firstname;
-    this.group = group;
-    this.middlename = middlename;
-    this.lastname = lastname;
-    this.address = address;
-    this.homePhone = homePhone;
-    this.email = email;
-  }
   @Override
   public String toString() {
     return "ContactData{" +
@@ -80,8 +68,4 @@ public class ContactData {
   }
 
   public static String getGroup() {  return group;  }
-
-  public int getId() {
-    return id;
-  }
 }
