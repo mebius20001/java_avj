@@ -18,12 +18,6 @@ public class ContactCreationTests extends TestBase {
     app.getContactHelper().createContact(contact,true);
     app.getNavigationHelper().goToHomePage();
 
-    /*
-    app.getContactHelper().initContactCreation();
-    app.getContactHelper().fillContactForm(new ContactData("Ivan",  "Ivanovich", "Petrov", "21 E Mossovet str", "123456789", "abc@job.com", "test_group"),true);
-    app.getContactHelper().submitContactCreation();
-    app.getNavigationHelper().goToHomePage();
-*/
 
     List<ContactData> after = app.getContactHelper().getContactList();
 
@@ -34,6 +28,9 @@ public class ContactCreationTests extends TestBase {
     before.sort(byId);
     after.sort(byId);
     Assert.assertEquals(before, after);
+
+
+
 
   }
 
