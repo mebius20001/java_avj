@@ -17,12 +17,11 @@ public class ContactHelper extends HelperBase{
   }
 
 
-  public void createContact(ContactData contact, boolean creation) {
-    initContactCreation();
-    fillContactForm(contact, creation);
-    submitContactCreation();
-  }
+  public void submitContactCreation() {
 
+    click(By.xpath("(//input[@name='submit'])[2]"));
+
+  }
 
   public void fillContactForm(ContactData contactData, boolean creation) {
     type(By.name("firstname"), contactData.getFirstname());
@@ -31,20 +30,19 @@ public class ContactHelper extends HelperBase{
     type(By.name("address"), contactData.getAddress());
     type(By.name("home"), contactData.getHomePhone());
     type(By.name("email"), contactData.getEmail());
+   // type(By.name("group"), contactData.getGroup());
 
    if (creation){
       new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(ContactData.getGroup());
     } else {
       Assert.assertFalse(isElementPresent(By.name("test_group")));
     }
+
   }
 
   public void initContactCreation() {
       click(By.linkText("add new"));
-  }
 
-  public void submitContactCreation() {
-    click(By.xpath("(//input[@name='submit'])[2]"));
   }
 
   public void deleteSelectedContacts() {
@@ -53,6 +51,7 @@ public class ContactHelper extends HelperBase{
 
   public void selectContact(int index) {
     wd.findElements(By.name("selected[]")).get(index).click();
+    //click(By.name("selected[]"));
   }
 
   public void logout() {
@@ -79,9 +78,9 @@ public class ContactHelper extends HelperBase{
     List<ContactData> contacts = new ArrayList<ContactData>();
     List<WebElement> elements = wd.findElements(By.name("entry"));
     for (WebElement element : elements){
-      //String name = element.getText();
+      String name = element.getText();
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-      ContactData contact = new ContactData(id,"Ivan",  "Ivanovich", "Petrov", "21 E Mossovet str", "123456789", "abc@job.com", "test_group");
+      ContactData contact = new ContactData("Ivan",  "Ivanovich", "Petrov", "21 E Mossovet str", "123456789", "abc@job.com", "test_group");
       contacts.add(contact);
     }
     return contacts;
