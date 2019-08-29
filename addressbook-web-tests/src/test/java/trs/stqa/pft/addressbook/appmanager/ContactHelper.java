@@ -55,16 +55,9 @@ public class ContactHelper extends HelperBase{
     wd.findElements(By.name("selected[]")).get(index).click();
   }
 
-  public void logout() {
-    wd.findElement(By.linkText("Logout")).click();
-  }
 
-  public void closeAlertWindow() {
-    wd.switchTo().alert().accept();
-  }
-
-  public void initContactModification() {
-    click(By.cssSelector("img[alt=\"Edit\"]"));
+  public void initContactModification(int index) {
+    wd.findElements(By.cssSelector("img[alt=\"Edit\"]")).get(index).click();
   }
 
   public void submitContactModification() {
@@ -74,6 +67,14 @@ public class ContactHelper extends HelperBase{
   public boolean isThereAContact() {
 
     return isElementPresent(By.name("selected[]"));
+  }
+
+  public void logout() {
+    wd.findElement(By.linkText("Logout")).click();
+  }
+
+  public void closeAlertWindow() {
+    wd.switchTo().alert().accept();
   }
 //**********************************************
 
