@@ -84,7 +84,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ContactModificationTests">
+  <component name="RunManager" selected="TestNG.trs.stqa.pft.addressbook.tests">
     <configuration name="ContactCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -179,7 +179,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupDeletionTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="trs.stqa.pft.addressbook.tests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -188,8 +188,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="trs.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.GroupDeletionTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
       <properties />
       <listeners />
       <method v="2">
@@ -197,19 +196,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.GroupDeletionTests" />
       <item itemvalue="TestNG.GroupCreationTests" />
       <item itemvalue="TestNG.ContactCreationTests" />
       <item itemvalue="TestNG.ContactDeletionTest" />
       <item itemvalue="TestNG.ContactModificationTests" />
+      <item itemvalue="TestNG.trs.stqa.pft.addressbook.tests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.trs.stqa.pft.addressbook.tests" />
         <item itemvalue="TestNG.ContactModificationTests" />
         <item itemvalue="TestNG.ContactCreationTests" />
         <item itemvalue="TestNG.ContactDeletionTest" />
         <item itemvalue="TestNG.GroupCreationTests" />
-        <item itemvalue="TestNG.GroupDeletionTests" />
       </list>
     </recent_temporary>
   </component>
