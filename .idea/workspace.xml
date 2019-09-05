@@ -205,8 +205,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.trs.stqa.pft.addressbook.tests" />
-        <item itemvalue="TestNG.ContactCreationTests" />
         <item itemvalue="TestNG.ContactPhoneTest" />
+        <item itemvalue="TestNG.ContactCreationTests" />
         <item itemvalue="TestNG.ContactDeletionTest" />
         <item itemvalue="TestNG.ContactModificationTests" />
       </list>

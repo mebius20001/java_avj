@@ -10,10 +10,29 @@ public class ContactData {
   private  String homePhone;
   private String mobilePhone;
   private String workPhone;
+  private String allPhones;
   private  String email;
   private  String email2;
   private  String email3;
+  private String allEmails;
 
+
+
+  public String getAllEmails() {
+    return allEmails;
+  }
+  public String getAllPhones() {
+    return allPhones;
+  }
+
+  public ContactData withAllEmails(String allEmails) {
+    this.allEmails = allEmails;
+    return this;
+  }
+  public ContactData withAllPhones(String allPhones) {
+    this.allPhones = allPhones;
+    return this;
+  }
 
   public String getFirstname() {
     return firstname;

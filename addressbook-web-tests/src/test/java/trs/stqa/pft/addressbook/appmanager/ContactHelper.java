@@ -71,7 +71,6 @@ public class ContactHelper extends HelperBase{
     type(By.name("home"), contactData.getHomePhone());
     type(By.name("mobile"), contactData.getMobilePhone());
     type(By.name("work"), contactData.getWorkPhone());
-
     type(By.name("email"), contactData.getEmail());
     type(By.name("email2"), contactData.getEmail2());
     type(By.name("email3"), contactData.getEmail3());
@@ -99,9 +98,7 @@ public class ContactHelper extends HelperBase{
     wd.findElements(By.name("selected[]")).get(index).click();
   }
 
-
   public boolean isThereAContact() {
-
     return isElementPresent(By.name("selected[]"));
   }
 
@@ -124,15 +121,14 @@ public class ContactHelper extends HelperBase{
       String firstname = cells.get(2).getText();
       String address = cells.get(3).getText();
 
-     // String AllEmails = cells.get(4).getText();
+      String allEmails = cells.get(4).getText();
+      String allphones = cells.get(5).getText();
 
-      String[] phones = cells.get(5).getText().split("\n");
-      System.out.println(phones.length);
-
+     // String[] phones = cells.get(5).getText().split("\n");
 
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
       contacts.add(new ContactData().withId(id).withFirstname( firstname).withLastname(lastname).withAddress(address)
-              .withHomePhone(phones[0]).withMobilePhone(phones[1]).withWorkPhone(phones[2]));
+              .withAllPhones(allphones).withAllEmails(allEmails));
 
     }
     return contacts;
@@ -143,6 +139,8 @@ public class ContactHelper extends HelperBase{
     initContactModification(contact.getId());
     String firstname = wd.findElement(By.name("firstname")).getAttribute("value");
     String lastname = wd.findElement(By.name("lastname")).getAttribute("value");
+    String address = wd.findElement(By.name("address")).getAttribute("value");
+
     String home = wd.findElement(By.name("home")).getAttribute("value");
     String mobile = wd.findElement(By.name("mobile")).getAttribute("value");
     String work = wd.findElement(By.name("work")).getAttribute("value");
@@ -151,6 +149,7 @@ public class ContactHelper extends HelperBase{
     String email3 = wd.findElement(By.name("email3")).getAttribute("value");
     wd.navigate().back();
     return (ContactData) new ContactData().withId(contact.getId()).withFirstname(firstname).withLastname(lastname)
+            .withAddress(address)
             .withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work)
             .withEmail(email).withEmail2(email2).withEmail3(email3);
 
