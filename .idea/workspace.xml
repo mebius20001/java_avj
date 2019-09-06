@@ -55,7 +55,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/sandbox/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/contacts-web-tests/build.gradle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/addressbook-web-tests" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -85,6 +85,21 @@
     </option>
   </component>
   <component name="RunManager" selected="TestNG.trs.stqa.pft.addressbook.tests">
+    <configuration name="GroupDataGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.generators.GroupDataGenerator" />
+      <module name="addressbook-web-tests.test" />
+      <option name="PROGRAM_PARAMETERS" value="-c 20 -f src/test/resources/groups.csv" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/addressbook-web-tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trs.stqa.pft.addressbook.generators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ContactCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -102,7 +117,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactDeletionTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactCreationTests.testContactCreation" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -111,15 +126,16 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="trs.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.ContactDeletionTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.ContactCreationTests" />
+      <option name="METHOD_NAME" value="testContactCreation" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactModificationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactCreationTests.testCurrentdir" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -128,25 +144,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="trs.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.ContactModificationTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactPhoneTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trs.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="trs.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.ContactPhoneTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.ContactCreationTests" />
+      <option name="METHOD_NAME" value="testCurrentdir" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -196,19 +196,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.GroupDataGenerator" />
       <item itemvalue="TestNG.trs.stqa.pft.addressbook.tests" />
       <item itemvalue="TestNG.ContactCreationTests" />
-      <item itemvalue="TestNG.ContactDeletionTest" />
-      <item itemvalue="TestNG.ContactModificationTests" />
-      <item itemvalue="TestNG.ContactPhoneTest" />
+      <item itemvalue="TestNG.ContactCreationTests.testCurrentdir" />
+      <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.trs.stqa.pft.addressbook.tests" />
-        <item itemvalue="TestNG.ContactPhoneTest" />
+        <item itemvalue="Application.GroupDataGenerator" />
         <item itemvalue="TestNG.ContactCreationTests" />
-        <item itemvalue="TestNG.ContactDeletionTest" />
-        <item itemvalue="TestNG.ContactModificationTests" />
+        <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
+        <item itemvalue="TestNG.ContactCreationTests.testCurrentdir" />
       </list>
     </recent_temporary>
   </component>
