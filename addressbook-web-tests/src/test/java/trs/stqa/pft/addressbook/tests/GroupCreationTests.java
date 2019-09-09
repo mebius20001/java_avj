@@ -56,6 +56,7 @@ public class GroupCreationTests extends TestBase {
 
       app.group().groupPage();
       Groups before = app.group().all();
+
       app.group().createGroup(group);
       app.group().groupPage(); //????
 
