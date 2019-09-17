@@ -88,7 +88,7 @@
     </option>
   </component>
   <component name="RunManager" selected="TestNG.GroupModificationTests">
-    <configuration name="ContactPhoneTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -97,7 +97,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="trs.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.ContactPhoneTest" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.ContactCreationTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -105,7 +105,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DbConnectionTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactDeletionTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -114,7 +114,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="trs.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.DbConnectionTest" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.ContactDeletionTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -139,6 +139,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GroupDeletionTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trs.stqa.pft.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="trs.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.GroupDeletionTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GroupModificationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -156,37 +173,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HbConnectionTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trs.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="trs.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.HbConnectionTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="TestNG.ContactPhoneTest" />
-      <item itemvalue="TestNG.DbConnectionTest" />
-      <item itemvalue="TestNG.HbConnectionTest" />
       <item itemvalue="TestNG.GroupCreationTests" />
+      <item itemvalue="TestNG.ContactCreationTests" />
+      <item itemvalue="TestNG.ContactDeletionTest" />
+      <item itemvalue="TestNG.GroupDeletionTests" />
       <item itemvalue="TestNG.GroupModificationTests" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.GroupModificationTests" />
-        <item itemvalue="TestNG.HbConnectionTest" />
+        <item itemvalue="TestNG.GroupDeletionTests" />
         <item itemvalue="TestNG.GroupCreationTests" />
-        <item itemvalue="TestNG.DbConnectionTest" />
-        <item itemvalue="TestNG.ContactPhoneTest" />
+        <item itemvalue="TestNG.ContactCreationTests" />
+        <item itemvalue="TestNG.ContactDeletionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -207,17 +207,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/trs/stqa/pft/addressbook/tests/GroupModificationTests.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

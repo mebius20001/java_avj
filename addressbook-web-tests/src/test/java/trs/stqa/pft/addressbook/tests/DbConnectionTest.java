@@ -19,7 +19,7 @@ public class DbConnectionTest {
       Groups groups = new Groups();
       while (rs.next()){
         groups.add(new GroupData().withId(rs.getInt("group_id"))
-                .withName(rs.getString("group_name")).withHeader(rs.getString("group_header")).withFooter(rs.getString("group_footer")));
+                .withName(rs.getString("group_name")).withHeader(rs.getString("group_header"))  .withFooter(rs.getString("group_footer")));
       }
       rs.close();
       st.close();

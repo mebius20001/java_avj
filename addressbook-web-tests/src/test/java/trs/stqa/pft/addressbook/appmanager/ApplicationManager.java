@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-//import sun.plugin2.util.BrowserType;
 
 public class ApplicationManager {
   private final Properties properties;
@@ -70,23 +69,15 @@ public class ApplicationManager {
     }
   }
 
-
   public GroupHelper group() {
     return groupHelper;
   }
-
-
   public NavigationHelper goTo() {
     return navigationHelper;
   }
-
   public ContactHelper contact() {
     return contactHelper;
   }
-
-  public DbHelper db(){
-    return dbHelper;
-  }
-
+  public DbHelper db(){ return dbHelper;  }
 
 }
