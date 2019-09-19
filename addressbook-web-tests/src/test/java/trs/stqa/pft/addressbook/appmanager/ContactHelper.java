@@ -77,7 +77,8 @@ public class ContactHelper extends HelperBase{
     //attach(By.name("photo"), contactData.getPhoto()); //!!! It was a Problem !!!
 
    if (!creation){
-      new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(ContactData.getGroup());
+     Assert.assertTrue(contactData.getGroups().size() == 1);
+     new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroups().iterator().next().getName());
     } else {
       Assert.assertFalse(isElementPresent(By.name("test_group")));
     }
