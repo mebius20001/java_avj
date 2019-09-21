@@ -20,10 +20,7 @@ public class ContactDeletionTest extends TestBase {
               .withAddress("21 E Mossovet str").withHomePhone("123456789").withEmail("abc@job.com");
               //.withGroup("test_group");
 
-
       app.contact().create(contact,true);
-
-
       app.contact().HomePage();
     }
   }

@@ -56,6 +56,18 @@ public class ContactHelper extends HelperBase{
     HomePage();
   }
 
+  public void select(ContactData contact) {
+    selectContactById(contact.getId());
+    System.out.println(contact.getId());
+   // deleteSelectedContacts();
+   // closeAlertWindow();
+    HomePage();
+  }
+
+
+
+
+
   public void HomePage() {
     if (isElementPresent(By.id("maintable")) ) {
       return;
@@ -156,6 +168,40 @@ public class ContactHelper extends HelperBase{
             .withEmail(email).withEmail2(email2).withEmail3(email3);
 
   }
+
+//***********************
+  public void findContactByID(Integer id) {
+  //  wd.findElement(By.id(String.valueOf(id))).click();
+    String ids = String.valueOf(id);
+    System.out.println(ids);
+
+    wd.findElement(By.id( ids )).click();
+  }
+
+  public void initAddContactToGroup() {
+    wd.findElement(By.name("to_group")).click();
+  }
+
+  public void selectGroupToAdd(String groupName, Integer GroupID) {
+
+    new Select(wd.findElement(By.name("to_group"))).selectByVisibleText(groupName);
+    wd.findElement(By.xpath("(//option[@value=" + GroupID + " ])[2]")).click();
+
+    /*
+    new Select(wd.findElement(By.name("to_group"))).selectByVisibleText("test 0");
+    wd.findElement(By.xpath("(//option[@value='93'])[2]")).click();
+     */
+  }
+
+  public void addToGroupButton () {
+    wd.findElement(By.name("add")).click();
+  }
+
+  public void goToGroupPageWithName(String groupName) {
+    wd.findElement(By.linkText("group page \"" + groupName + "\"")).click();
+    //wd.findElement(By.linkText("group page \"test 0\"")).click();
+  }
+
 
 
 }
