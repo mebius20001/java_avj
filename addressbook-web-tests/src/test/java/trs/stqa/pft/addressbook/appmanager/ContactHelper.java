@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import trs.stqa.pft.addressbook.model.ContactData;
 import trs.stqa.pft.addressbook.model.Contacts;
+import trs.stqa.pft.addressbook.model.GroupData;
+import trs.stqa.pft.addressbook.model.Groups;
 
 import java.util.List;
 
@@ -178,7 +180,7 @@ public class ContactHelper extends HelperBase{
     wd.findElement(By.id( ids )).click();
   }
 
-  public void initAddContactToGroup() {
+  public void initAddToGroup() {
     wd.findElement(By.name("to_group")).click();
   }
 
@@ -187,13 +189,10 @@ public class ContactHelper extends HelperBase{
     new Select(wd.findElement(By.name("to_group"))).selectByVisibleText(groupName);
     wd.findElement(By.xpath("(//option[@value=" + GroupID + " ])[2]")).click();
 
-    /*
-    new Select(wd.findElement(By.name("to_group"))).selectByVisibleText("test 0");
-    wd.findElement(By.xpath("(//option[@value='93'])[2]")).click();
-     */
+
   }
 
-  public void addToGroupButton () {
+  public void addToGroup_Button() {
     wd.findElement(By.name("add")).click();
   }
 
@@ -203,5 +202,21 @@ public class ContactHelper extends HelperBase{
   }
 
 
+  public Boolean isContactInGroup(ContactData selectedContact, GroupData selectedGroup) {
 
+    Groups contact2 = selectedContact.getGroups();
+    for (GroupData groupFromContact : contact2){
+      if (groupFromContact.getId() == selectedGroup.getId()) {
+
+        System.out.println("ИД РАВНЫ КОНТАКТ УЖЕ В ГРУППЕ!!!!!");
+        System.out.println(groupFromContact.getId() + " = " + selectedGroup.getId());
+        System.out.println(groupFromContact.getName() + " = " + selectedGroup.getName());
+        return Boolean.TRUE;
+      }
+
+    }
+
+
+    return Boolean.FALSE;
+  }
 }

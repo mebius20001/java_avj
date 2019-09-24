@@ -41,14 +41,8 @@ public class ApplicationManager {
     }else if (browser.equals(BrowserType.IE)){
       wd = new InternetExplorerDriver();
     }
-    wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    wd.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     wd.get(properties.getProperty("web.baseUrl"));
-
-  }
-
-
-  public void stop() {
-    wd.quit();
   }
 
   private boolean isElementPresent(By by) {
@@ -60,6 +54,15 @@ public class ApplicationManager {
     }
   }
 
+  public void stop() {
+    wd.quit();
+  }
 
+  public HttpSession newSession(){
+    return  new HttpSession(this);
+  }
 
+  public Object getProperty(String key) {
+    return properties.getProperty(key);
+  }
 }
