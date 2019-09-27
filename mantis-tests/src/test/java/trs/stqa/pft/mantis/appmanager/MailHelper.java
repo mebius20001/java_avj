@@ -30,7 +30,8 @@ import java.util.stream.Collectors;
     public List<MailMessage> waitForMail(int count, long timeout) {
       long start = System.currentTimeMillis();
       while (System.currentTimeMillis() < start + timeout) {
-        if (wiser.getMessages().size() >= count) {
+
+        if (wiser.getMessages().size() >= count) { // == 1 !!!
           return wiser.getMessages().stream().map((m) -> toModeMail(m)).collect(Collectors.toList());
         }
         try {
@@ -40,6 +41,8 @@ import java.util.stream.Collectors;
         }
       }
       throw new Error("No mail:");
+
+
     }
 
     public static MailMessage toModeMail(WiserMessage m) {

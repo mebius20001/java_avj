@@ -3,7 +3,6 @@ package trs.stqa.pft.addressbook.tests;
 import org.testng.annotations.Test;
 import trs.stqa.pft.addressbook.model.GroupData;
 import trs.stqa.pft.addressbook.model.Groups;
-
 import java.sql.*;
 
 public class DbConnectionTest {
@@ -26,9 +25,6 @@ public class DbConnectionTest {
       conn.close();
 
       System.out.println(groups);
-
-
-
 
     } catch (SQLException ex) {
       // handle any errors
