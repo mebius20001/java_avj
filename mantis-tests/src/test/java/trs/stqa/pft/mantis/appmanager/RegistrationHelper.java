@@ -35,7 +35,15 @@ public class RegistrationHelper extends HelperBase {
 
   public void selectSomeUser() {
     db.DbHelperStart();
-    String userName = db.usernames.get(3);
+
+    Integer userListSize = db.usernames.size();
+    Integer rnd = (int)(Math.random() * (userListSize  + 1)) + 1; //Max= size +1 , Min = 1
+
+    //(int)(Math.random() * ((max - min) + 1)) + min
+
+    System.out.println("RANDOM= " + rnd + " SIZE= " + userListSize);
+
+    String userName = db.usernames.get(rnd);
     click(By.linkText(userName));
   }
 

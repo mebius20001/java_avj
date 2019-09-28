@@ -55,7 +55,7 @@ public class GroupData {
   private  String footer;
 
   public Set<ContactData> getContacts() {
-    return  contacts;// new Contacts(contacts); // return contacts;
+    return   new Contacts(contacts); // return contacts;
   }
 
   @ManyToMany(mappedBy = "groups")

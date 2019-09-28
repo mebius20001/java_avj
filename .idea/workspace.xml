@@ -110,19 +110,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.changeUserPasswordTests">
-    <configuration name="DbHelperM.DbHelperM" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="mantis-tests.test" />
+  <component name="RunManager" selected="TestNG.changeUserPasswordTests.testRefreshUserPassword">
+    <configuration name="ContactAddToGroupTests.testAddContactToTheGroup" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="trs.stqa.pft.mantis.tests.*" />
+          <option name="PATTERN" value="trs.stqa.pft.addressbook.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="trs.stqa.pft.mantis.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.DbHelperM" />
-      <option name="METHOD_NAME" value="DbHelperM" />
+      <option name="PACKAGE_NAME" value="trs.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.ContactAddToGroupTests" />
+      <option name="METHOD_NAME" value="testAddContactToTheGroup" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="PARAMETERS" value="" />
@@ -137,7 +137,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactDeletionFromGroupTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trs.stqa.pft.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="trs.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.ContactDeletionFromGroupTests" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DbHelperM.DbHelperM" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mantis-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -147,9 +172,10 @@
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="trs.stqa.pft.mantis.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.LoginTests" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.DbHelperM" />
+      <option name="METHOD_NAME" value="DbHelperM" />
       <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <option name="PARAMETERS" value="" />
       <option name="OUTPUT_DIRECTORY" value="" />
       <option name="TEST_SEARCH_SCOPE">
@@ -232,46 +258,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="changeUserPasswordTests.testRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="mantis-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trs.stqa.pft.mantis.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="trs.stqa.pft.mantis.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.changeUserPasswordTests" />
-      <option name="METHOD_NAME" value="testRegistration" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="TestNG.LoginTests" />
       <item itemvalue="TestNG.changeUserPasswordTests" />
       <item itemvalue="TestNG.DbHelperM.DbHelperM" />
-      <item itemvalue="TestNG.changeUserPasswordTests.testRegistration" />
       <item itemvalue="TestNG.changeUserPasswordTests.testRefreshUserPassword" />
+      <item itemvalue="TestNG.ContactAddToGroupTests.testAddContactToTheGroup" />
+      <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.changeUserPasswordTests" />
         <item itemvalue="TestNG.changeUserPasswordTests.testRefreshUserPassword" />
+        <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
+        <item itemvalue="TestNG.ContactAddToGroupTests.testAddContactToTheGroup" />
+        <item itemvalue="TestNG.changeUserPasswordTests" />
         <item itemvalue="TestNG.DbHelperM.DbHelperM" />
-        <item itemvalue="TestNG.changeUserPasswordTests.testRegistration" />
-        <item itemvalue="TestNG.LoginTests" />
       </list>
     </recent_temporary>
   </component>
@@ -300,6 +300,11 @@
           <url>file://$PROJECT_DIR$/mantis-tests/src/test/java/trs/stqa/pft/mantis/appmanager/HttpSession.java</url>
           <line>37</line>
           <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/trs/stqa/pft/addressbook/tests/ContactDeletionFromGroupTests.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -188,10 +188,27 @@ public class ContactHelper extends HelperBase{
 
     new Select(wd.findElement(By.name("to_group"))).selectByVisibleText(groupName);
     wd.findElement(By.xpath("(//option[@value=" + GroupID + " ])[2]")).click();
-
-
   }
 
+//**********************************
+
+  public void selectGroupFromDropDownMenu(String groupName){
+    new Select(wd.findElement(By.name("group"))).selectByVisibleText(groupName);
+    //new Select(wd.findElement(By.name("group"))).selectByVisibleText(selectedGroup.getName());
+  }
+
+
+  public void removeSelectedContactFromGroup(){
+    //wd.findElement(By.name("selected[]")).click();// выбрать контакт
+    wd.findElement(By.name("remove")).click();
+  }
+
+  public void switchToAllGroupsDropDownMenu(){
+    new Select(wd.findElement(By.name("group"))).selectByVisibleText("[all]");
+    wd.findElement(By.xpath("//form[@id='right']/select/option[2]")).click();
+  }
+
+  //********************************************************
   public void addToGroup_Button() {
     wd.findElement(By.name("add")).click();
   }
@@ -213,10 +230,9 @@ public class ContactHelper extends HelperBase{
         System.out.println(groupFromContact.getName() + " = " + selectedGroup.getName());
         return Boolean.TRUE;
       }
-
     }
-
-
     return Boolean.FALSE;
   }
+
+
 }
