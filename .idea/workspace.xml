@@ -27,6 +27,9 @@
     <projectState path="$PROJECT_DIR$/sandbox">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/soap-sample">
+      <ProjectState />
+    </projectState>
   </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
@@ -42,12 +45,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="sandbox" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -71,31 +69,31 @@
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/mantis-tests/src/test/java/trs/stqa/pft/mantis/tests" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/sandbox/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mantis-tests/src/test/java/trs/stqa/pft/mantis/tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/soap-sample/build.gradle" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15429688" />
-    <property name="project.structure.side.proportion" value="0.15115115" />
+    <property name="project.structure.side.proportion" value="0.33833835" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="trs.stqa.pft.mantis" />
-      <recent name="trs.stqa.pft.sandbox" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Igor\Documents\GitHub\java_avj\mantis-tests\src\test\resources" />
-      <recent name="C:\Users\Igor\Documents\GitHub\java_avj\addressbook-web-tests\src\test\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="trs.stqa.pft.mantis.tests" />
-      <recent name="trs.stqa.pft.mantis.appmanager" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="trs.stqa.pft.mantis.appmanager" />
       <recent name="trs.stqa.pft.addressbook.appmanager" />
       <recent name="contacts.appmanager" />
       <recent name="contacts" />
       <recent name="trs.stqa.pft.addressbook" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="trs.stqa.pft.mantis" />
+      <recent name="trs.stqa.pft.sandbox" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="trs.stqa.pft.mantis.tests" />
+      <recent name="trs.stqa.pft.mantis.appmanager" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Igor\Documents\GitHub\java_avj\mantis-tests\src\test\resources" />
+      <recent name="C:\Users\Igor\Documents\GitHub\java_avj\addressbook-web-tests\src\test\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -110,7 +108,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.changeUserPasswordTests.testRefreshUserPassword">
+  <component name="RunManager" selected="TestNG.SoapTests">
     <configuration name="ContactAddToGroupTests.testAddContactToTheGroup" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -162,7 +160,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DbHelperM.DbHelperM" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SoapTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mantis-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -172,8 +170,33 @@
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="trs.stqa.pft.mantis.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.DbHelperM" />
-      <option name="METHOD_NAME" value="DbHelperM" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.SoapTests" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SoapTests.testGetProgects" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mantis-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trs.stqa.pft.mantis.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="trs.stqa.pft.mantis.tests" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.SoapTests" />
+      <option name="METHOD_NAME" value="testGetProgects" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="PARAMETERS" value="" />
@@ -193,31 +216,6 @@
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="trs.stqa.pft.mantis.tests" />
       <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.LoginTests" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="changeUserPasswordTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="mantis-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trs.stqa.pft.mantis.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="trs.stqa.pft.mantis.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.changeUserPasswordTests" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
@@ -259,19 +257,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.changeUserPasswordTests" />
-      <item itemvalue="TestNG.DbHelperM.DbHelperM" />
       <item itemvalue="TestNG.changeUserPasswordTests.testRefreshUserPassword" />
       <item itemvalue="TestNG.ContactAddToGroupTests.testAddContactToTheGroup" />
       <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
+      <item itemvalue="TestNG.SoapTests.testGetProgects" />
+      <item itemvalue="TestNG.SoapTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SoapTests" />
+        <item itemvalue="TestNG.SoapTests.testGetProgects" />
         <item itemvalue="TestNG.changeUserPasswordTests.testRefreshUserPassword" />
         <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
         <item itemvalue="TestNG.ContactAddToGroupTests.testAddContactToTheGroup" />
-        <item itemvalue="TestNG.changeUserPasswordTests" />
-        <item itemvalue="TestNG.DbHelperM.DbHelperM" />
       </list>
     </recent_temporary>
   </component>

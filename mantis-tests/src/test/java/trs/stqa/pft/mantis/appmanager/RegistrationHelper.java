@@ -43,6 +43,7 @@ public class RegistrationHelper extends HelperBase {
 
     System.out.println("RANDOM= " + rnd + " SIZE= " + userListSize);
 
+
     String userName = db.usernames.get(rnd);
     click(By.linkText(userName));
   }
