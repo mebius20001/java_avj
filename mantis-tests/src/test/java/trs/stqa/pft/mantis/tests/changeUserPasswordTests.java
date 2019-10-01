@@ -35,23 +35,21 @@ public class changeUserPasswordTests extends TestBase {
 
   @Test(enabled = true)
   public void testRefreshUserPassword() throws IOException {
-    long now = System.currentTimeMillis();
-    String email = String.format("user%s@localhost.localdomain", now);
-    String user = String.format("user%s", now);
-    String administrator = "administrator";
-    String adminPassword = "root";
-    String password = "password";
-
-    app.registration().startAsUser(administrator, adminPassword);
+    app.registration().startAsUser("administrator", "root");
     app.registration().toUsersPage();
-    app.registration().selectSomeUser();
+
+    Integer selectedUserID = app.registration().selectSomeUserId();
+    String selectedUserName = app.registration().selectUserName(selectedUserID);
+    String selectedUserPassword = app.registration().selectUserPassword(selectedUserID);
+    String selectedUserEmail = app.registration().selectUserEmail(selectedUserID);
+
     app.registration().resetSelectedUserPassword();
 
     List<MailMessage> mailMessages = app.mail().waitForMail(1, 10000);
-    String confirmationLink = findConfirmationLink(mailMessages, email);
-    app.registration().finish(confirmationLink, password, user);
-
-    assertTrue(app.registration().startAsUser(user, password));
+    String confirmationLink = findConfirmationLink(mailMessages, selectedUserEmail);
+    
+    app.registration().finish(confirmationLink, selectedUserPassword, selectedUserName);
+    assertTrue(app.registration().startAsUser(selectedUserName, selectedUserPassword));
   }
 
   private String findConfirmationLink(List<MailMessage> mailMessages, String email) {

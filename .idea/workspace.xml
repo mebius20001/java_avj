@@ -108,33 +108,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.SoapTests">
-    <configuration name="ContactAddToGroupTests.testAddContactToTheGroup" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trs.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="trs.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.ContactAddToGroupTests" />
-      <option name="METHOD_NAME" value="testAddContactToTheGroup" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.changeUserPasswordTests">
     <configuration name="ContactDeletionFromGroupTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -230,6 +204,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="changeUserPasswordTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mantis-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trs.stqa.pft.mantis.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="trs.stqa.pft.mantis.tests" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.changeUserPasswordTests" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="changeUserPasswordTests.testRefreshUserPassword" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mantis-tests.test" />
       <extension name="coverage">
@@ -258,18 +257,18 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.changeUserPasswordTests.testRefreshUserPassword" />
-      <item itemvalue="TestNG.ContactAddToGroupTests.testAddContactToTheGroup" />
       <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
       <item itemvalue="TestNG.SoapTests.testGetProgects" />
       <item itemvalue="TestNG.SoapTests" />
+      <item itemvalue="TestNG.changeUserPasswordTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.changeUserPasswordTests" />
         <item itemvalue="TestNG.SoapTests" />
         <item itemvalue="TestNG.SoapTests.testGetProgects" />
         <item itemvalue="TestNG.changeUserPasswordTests.testRefreshUserPassword" />
         <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
-        <item itemvalue="TestNG.ContactAddToGroupTests.testAddContactToTheGroup" />
       </list>
     </recent_temporary>
   </component>

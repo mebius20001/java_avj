@@ -33,20 +33,32 @@ public class RegistrationHelper extends HelperBase {
     wd.get(app.getProperty("web.baseUrl") + "/manage_user_page.php");
   }
 
-  public void selectSomeUser() {
+  public Integer selectSomeUserId() {
     db.DbHelperStart();
 
     Integer userListSize = db.usernames.size();
-    Integer rnd = (int)(Math.random() * (userListSize  + 1)) + 1; //Max= size +1 , Min = 1
-
+    Integer rnd = (int)(Math.random() * (userListSize  + 2)) + 1; //Max= size , Min = 1
     //(int)(Math.random() * ((max - min) + 1)) + min
-
     System.out.println("RANDOM= " + rnd + " SIZE= " + userListSize);
 
+    String userName = selectUserName(rnd);
 
-    String userName = db.usernames.get(rnd);
     click(By.linkText(userName));
+    return rnd;
   }
+
+  public String selectUserName(Integer id){
+    return db.usernames.get(id);
+  }
+
+  public String selectUserPassword(Integer id){
+    return db.passwords.get(id);
+  }
+
+  public String selectUserEmail(Integer id){
+    return db.emails.get(id);
+  }
+
 
   public void resetSelectedUserPassword() {
     click(By.cssSelector("input[value='Reset Password']"));

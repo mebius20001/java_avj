@@ -8,6 +8,8 @@ public class DbHelperM extends TestBase {
 
   public List<String> ids = new ArrayList<>();
   public List<String> usernames = new ArrayList<>();
+  public List<String> passwords = new ArrayList<>();
+  public List<String> emails = new ArrayList<>();
 
   public void DbHelperStart() {
 
@@ -22,6 +24,9 @@ public class DbHelperM extends TestBase {
       while (rs.next()) {
         ids.add(rs.getString("id"));
         usernames.add(rs.getString("username"));
+        passwords.add(rs.getString("password"));
+        emails.add(rs.getString("email"));
+
       }
       //System.out.println(ids);
       //System.out.println(usernames);
