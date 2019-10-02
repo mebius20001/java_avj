@@ -24,6 +24,9 @@
     <projectState path="$PROJECT_DIR$/mantis-tests">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/rest-sample">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$/sandbox">
       <ProjectState />
     </projectState>
@@ -69,31 +72,31 @@
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/mantis-tests/src/test/java/trs/stqa/pft/mantis/tests" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/sandbox/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/soap-sample/build.gradle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/rest-sample/.gradle/5.5.1" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.33833835" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="trs.stqa.pft.mantis.appmanager" />
-      <recent name="trs.stqa.pft.addressbook.appmanager" />
-      <recent name="contacts.appmanager" />
-      <recent name="contacts" />
-      <recent name="trs.stqa.pft.addressbook" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="trs.stqa.pft.mantis" />
       <recent name="trs.stqa.pft.sandbox" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Igor\Documents\GitHub\java_avj\mantis-tests\src\test\resources" />
+      <recent name="C:\Users\Igor\Documents\GitHub\java_avj\addressbook-web-tests\src\test\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="trs.stqa.pft.mantis.tests" />
       <recent name="trs.stqa.pft.mantis.appmanager" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Igor\Documents\GitHub\java_avj\mantis-tests\src\test\resources" />
-      <recent name="C:\Users\Igor\Documents\GitHub\java_avj\addressbook-web-tests\src\test\resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="trs.stqa.pft.rest.tests" />
+      <recent name="trs.stqa.pft.mantis.appmanager" />
+      <recent name="trs.stqa.pft.addressbook.appmanager" />
+      <recent name="contacts.appmanager" />
+      <recent name="contacts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -108,18 +111,38 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.changeUserPasswordTests">
-    <configuration name="ContactDeletionFromGroupTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
+  <component name="RunManager" selected="TestNG.RestTests">
+    <configuration name="RestTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/rest-sample" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;trs.stqa.pft.rest.tests.RestTests&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="RestTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="rest-sample.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="trs.stqa.pft.addressbook.tests.*" />
+          <option name="PATTERN" value="trs.stqa.pft.rest.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="trs.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.ContactDeletionFromGroupTests" />
+      <option name="PACKAGE_NAME" value="trs.stqa.pft.rest.tests" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.rest.tests.RestTests" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
@@ -229,46 +252,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="changeUserPasswordTests.testRefreshUserPassword" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="mantis-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trs.stqa.pft.mantis.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="trs.stqa.pft.mantis.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.changeUserPasswordTests" />
-      <option name="METHOD_NAME" value="testRefreshUserPassword" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="TestNG.changeUserPasswordTests.testRefreshUserPassword" />
-      <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
       <item itemvalue="TestNG.SoapTests.testGetProgects" />
       <item itemvalue="TestNG.SoapTests" />
       <item itemvalue="TestNG.changeUserPasswordTests" />
+      <item itemvalue="Gradle.RestTests" />
+      <item itemvalue="TestNG.RestTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RestTests" />
+        <item itemvalue="Gradle.RestTests" />
         <item itemvalue="TestNG.changeUserPasswordTests" />
         <item itemvalue="TestNG.SoapTests" />
         <item itemvalue="TestNG.SoapTests.testGetProgects" />
-        <item itemvalue="TestNG.changeUserPasswordTests.testRefreshUserPassword" />
-        <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
       </list>
     </recent_temporary>
   </component>
@@ -302,6 +299,11 @@
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/trs/stqa/pft/addressbook/tests/ContactDeletionFromGroupTests.java</url>
           <line>22</line>
           <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rest-sample/src/test/java/trs/stqa/pft/rest/tests/RestTests.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

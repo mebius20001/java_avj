@@ -1,7 +1,7 @@
 package trs.stqa.pft.mantis.appmanager;
 
 import org.openqa.selenium.By;
-import trs.stqa.pft.mantis.tests.DbHelperM;
+import trs.stqa.pft.rest.tests.DbHelperM;
 
 public class RegistrationHelper extends HelperBase {
   DbHelperM db = new DbHelperM();
