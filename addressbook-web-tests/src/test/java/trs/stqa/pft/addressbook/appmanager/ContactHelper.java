@@ -110,10 +110,6 @@ public class ContactHelper extends HelperBase{
     click(By.xpath("//input[@value='Delete']"));
   }
 
-  public void selectContact(int index) {
-    wd.findElements(By.name("selected[]")).get(index).click();
-  }
-
   public boolean isThereAContact() {
     return isElementPresent(By.name("selected[]"));
   }

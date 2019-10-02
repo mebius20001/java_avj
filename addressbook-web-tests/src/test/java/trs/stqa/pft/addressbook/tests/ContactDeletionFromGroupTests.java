@@ -18,21 +18,20 @@ public class ContactDeletionFromGroupTests extends TestBase {
     selectedGroup.getContacts();
 
     System.out.println("groupName= " + selectedGroup.getName());
+    System.out.println("SelectedContact ID = " + selectedContact.getId());
 
 
    app.contact().selectGroupFromDropDownMenu(selectedGroup.getName());
-   app.contact().selectContact(selectedContact.getId());
+
+   app.contact().selectContactById(selectedContact.getId());
+
    app.contact().removeSelectedContactFromGroup();
 
+    app.contact().switchToAllGroupsDropDownMenu();
+    System.out.println("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
 
-    //selectGroupFromDropDownGroupMenu(selectedGroup);
-    System.out.println("!!!!! ** OK");
-//    removeSelectedContactFromGroup();
-   // wd.findElement(By.linkText("home")).click();
-//    clickToDropDownGroupMenu();
-//    switchToAllGroupsDropDownMenu();
-    // ********************************
-    //if (someGroups.size() == 0) { addNewGroup("additionalGroup");  }
+  //  if (someGroups.size() == 0) {
+   //   addNewGroup("additionalGroup");  }
   }
 
   public void selectGroupFromDropDownGroupMenu(GroupData groupData){

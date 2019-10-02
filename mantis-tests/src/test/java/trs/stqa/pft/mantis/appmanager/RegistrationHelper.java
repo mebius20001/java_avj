@@ -35,27 +35,28 @@ public class RegistrationHelper extends HelperBase {
 
   public Integer selectSomeUserId() {
     db.DbHelperStart();
-
     Integer userListSize = db.usernames.size();
-    Integer rnd = (int)(Math.random() * (userListSize  + 2)) + 1; //Max= size , Min = 1
-    //(int)(Math.random() * ((max - min) + 1)) + min
-    System.out.println("RANDOM= " + rnd + " SIZE= " + userListSize);
+    Integer rnd = null;
+    String userName = null;
 
-    String userName = selectUserName(rnd);
+    do {
+      rnd = (int) (Math.random() * (userListSize)) + 1;
+      userName = selectUserName(rnd);  // System.out.println("RANDOM= " + rnd + " SIZE= " + userListSize + " username = " + userName);
+    } while (userName.equals("administrator"));
 
     click(By.linkText(userName));
-    return rnd;
+    return rnd;      //(int)(Math.random() * ((max - min) + 1)) + min   //Max= size , Min = 1
   }
 
-  public String selectUserName(Integer id){
+  public String selectUserName(Integer id) {
     return db.usernames.get(id);
   }
 
-  public String selectUserPassword(Integer id){
+  public String selectUserPassword(Integer id) {
     return db.passwords.get(id);
   }
 
-  public String selectUserEmail(Integer id){
+  public String selectUserEmail(Integer id) {
     return db.emails.get(id);
   }
 

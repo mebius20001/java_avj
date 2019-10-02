@@ -47,7 +47,7 @@ public class changeUserPasswordTests extends TestBase {
 
     List<MailMessage> mailMessages = app.mail().waitForMail(1, 10000);
     String confirmationLink = findConfirmationLink(mailMessages, selectedUserEmail);
-    
+
     app.registration().finish(confirmationLink, selectedUserPassword, selectedUserName);
     assertTrue(app.registration().startAsUser(selectedUserName, selectedUserPassword));
   }

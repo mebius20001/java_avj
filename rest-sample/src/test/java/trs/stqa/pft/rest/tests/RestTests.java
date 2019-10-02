@@ -33,7 +33,7 @@ public class RestTests {
   }
 
   private Executor getExecutor() {
-    return  Executor.newInstance().auth("28accbe43ea112d9feb328d2c00b3eed","");
+    return  Executor.newInstance().auth("288f44776e7bec4bf44fdfeb1e646490","");
   }
 
   private int createIssue(Issue newIssue) {
