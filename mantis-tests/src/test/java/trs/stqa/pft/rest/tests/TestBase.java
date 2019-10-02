@@ -43,7 +43,7 @@ public class TestBase {
     MantisConnectPortType mc = app.soap().getMantisConnect();
     IssueData issue = mc.mc_issue_get("administrator", "root", BigInteger.valueOf(issueId));
     String status = issue.getStatus().getName();
-    if (status == "resolved" || status == "closed"){
+    if (status.equals("resolved") || status.equals("closed")){
       return false;
     }else return true;
 
