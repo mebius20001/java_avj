@@ -88,6 +88,7 @@
       <recent name="C:\Users\Igor\Documents\GitHub\java_avj\addressbook-web-tests\src\test\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="trs.stqa.pft.rest.tests" />
       <recent name="trs.stqa.pft.mantis.tests" />
       <recent name="trs.stqa.pft.mantis.appmanager" />
     </key>
@@ -111,7 +112,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.changeUserPasswordTests (1)">
+  <component name="RunManager" selected="TestNG.RestTests.testCreateIssue">
     <configuration name="RestTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -182,6 +183,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RestTests.testCreateIssue" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="rest-sample.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trs.stqa.pft.rest.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="trs.stqa.pft.rest.tests" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.rest.tests.RestTests" />
+      <option name="METHOD_NAME" value="testCreateIssue" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG">
       <module name="mantis-tests.test" />
       <option name="SUITE_NAME" value="" />
@@ -226,45 +253,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="changeUserPasswordTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="mantis-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trs.stqa.pft.mantis.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="trs.stqa.pft.mantis.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.changeUserPasswordTests" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="TestNG.changeUserPasswordTests" />
       <item itemvalue="Gradle.RestTests" />
       <item itemvalue="TestNG.RestTests" />
       <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
       <item itemvalue="TestNG.changeUserPasswordTests (1)" />
+      <item itemvalue="TestNG.RestTests.testCreateIssue" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.changeUserPasswordTests (1)" />
+        <item itemvalue="TestNG.RestTests.testCreateIssue" />
         <item itemvalue="TestNG.RestTests" />
+        <item itemvalue="TestNG.changeUserPasswordTests (1)" />
         <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
         <item itemvalue="Gradle.RestTests" />
-        <item itemvalue="TestNG.changeUserPasswordTests" />
       </list>
     </recent_temporary>
   </component>
@@ -293,11 +295,6 @@
           <url>file://$PROJECT_DIR$/mantis-tests/src/test/java/trs/stqa/pft/mantis/appmanager/HttpSession.java</url>
           <line>37</line>
           <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/rest-sample/src/test/java/trs/stqa/pft/rest/tests/RestTests.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/trs/stqa/pft/addressbook/tests/ContactDeletionFromGroupTests.java</url>
