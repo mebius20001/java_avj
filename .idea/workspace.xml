@@ -115,7 +115,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ContactAddToGroupTests.testAddContactToTheGroup">
+  <component name="RunManager" selected="TestNG.changeUserPasswordTests (1)">
     <configuration name="ContactAddToGroupTests.testAddContactToTheGroup" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -271,11 +271,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.changeUserPasswordTests (1)" />
         <item itemvalue="TestNG.ContactAddToGroupTests.testAddContactToTheGroup" />
         <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
         <item itemvalue="TestNG.RestTests.testCreateIssue" />
         <item itemvalue="TestNG.RestTests" />
-        <item itemvalue="TestNG.changeUserPasswordTests (1)" />
       </list>
     </recent_temporary>
   </component>

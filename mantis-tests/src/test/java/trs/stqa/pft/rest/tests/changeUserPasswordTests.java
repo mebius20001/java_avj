@@ -43,7 +43,7 @@ public class changeUserPasswordTests extends TestBase {
     String selectedUserPassword = app.registration().selectUserPassword(selectedUserID);
     String selectedUserEmail = app.registration().selectUserEmail(selectedUserID);
 
-    app.registration().resetSelectedUserPassword();
+    app.registration().resetSelectedUserPassword(selectedUserID);
 
     List<MailMessage> mailMessages = app.mail().waitForMail(1, 10000);
     String confirmationLink = findConfirmationLink(mailMessages, selectedUserEmail);

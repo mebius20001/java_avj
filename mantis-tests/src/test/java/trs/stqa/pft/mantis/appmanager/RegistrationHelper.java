@@ -44,7 +44,6 @@ public class RegistrationHelper extends HelperBase {
       userName = selectUserName(rnd);  // System.out.println("RANDOM= " + rnd + " SIZE= " + userListSize + " username = " + userName);
     } while (userName.equals("administrator"));
 
-    click(By.linkText(userName));
     return rnd;      //(int)(Math.random() * ((max - min) + 1)) + min   //Max= size , Min = 1
   }
 
@@ -61,7 +60,8 @@ public class RegistrationHelper extends HelperBase {
   }
 
 
-  public void resetSelectedUserPassword() {
+  public void resetSelectedUserPassword(Integer id) {
+    click(By.linkText(selectUserName(id)));
     click(By.cssSelector("input[value='Reset Password']"));
   }
 
