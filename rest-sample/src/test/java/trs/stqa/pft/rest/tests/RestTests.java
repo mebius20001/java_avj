@@ -14,7 +14,7 @@ public class RestTests extends TestBase {
   public void testCreateIssue() throws IOException {
 
     int isId = 50;
-    skipIfNotFixed(isId);
+   // skipIfNotFixed(isId);
 
     Set<Issue> oldIssues = getIssues();
     Issue newIssue = new Issue().withSubject("Test issue").withDescription("New test issue");

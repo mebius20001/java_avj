@@ -25,6 +25,12 @@ public class ContactHelper extends HelperBase{
     submitContactCreation();
   }
 
+  public void createInGroup(String groupName, ContactData contact, boolean creation) {
+    initContactCreation();
+    fillContactForm(contact, creation);
+    submitContactCreation();
+  }
+
   public void modify(ContactData contact) {
     initContactModification( contact.getId() );
     fillContactForm(contact ,true);
@@ -190,18 +196,32 @@ public class ContactHelper extends HelperBase{
 
   public void selectGroupFromDropDownMenu(String groupName){
     new Select(wd.findElement(By.name("group"))).selectByVisibleText(groupName);
-    //new Select(wd.findElement(By.name("group"))).selectByVisibleText(selectedGroup.getName());
   }
 
-
   public void removeSelectedContactFromGroup(){
-    //wd.findElement(By.name("selected[]")).click();// выбрать контакт
     wd.findElement(By.name("remove")).click();
   }
 
   public void switchToAllGroupsDropDownMenu(){
     new Select(wd.findElement(By.name("group"))).selectByVisibleText("[all]");
     wd.findElement(By.xpath("//form[@id='right']/select/option[2]")).click();
+  }
+
+
+  public void addToGroup(Integer contactId, Integer groupId, String groupName){
+
+    findContactByID(contactId);
+    initAddToGroup();
+    selectGroupToAdd(groupName, groupId);
+    addToGroup_Button();
+    HomePage();
+  }
+
+  public void removeFromGroup(String groupName, Integer contactId){
+    selectGroupFromDropDownMenu(groupName);
+    selectContactById(contactId);
+    removeSelectedContactFromGroup();
+   // switchToAllGroupsDropDownMenu();
   }
 
   //********************************************************
@@ -229,6 +249,7 @@ public class ContactHelper extends HelperBase{
     }
     return Boolean.FALSE;
   }
+
 
 
 }

@@ -1,6 +1,5 @@
 package trs.stqa.pft.addressbook.tests;
 
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
@@ -12,8 +11,6 @@ import trs.stqa.pft.addressbook.model.ContactData;
 import trs.stqa.pft.addressbook.model.Contacts;
 import trs.stqa.pft.addressbook.model.GroupData;
 import trs.stqa.pft.addressbook.model.Groups;
-
-import java.util.List;
 
 public class ContactAddToGroupTests extends TestBase {
   public SessionFactory sessionFactory;
@@ -37,27 +34,14 @@ public class ContactAddToGroupTests extends TestBase {
   @Test
   public void testAddContactToTheGroup() {
 
-    Session session = sessionFactory.openSession();
-    session.beginTransaction();
-    List<ContactData> result = session.createQuery("from ContactData where deprecated ='0000-00-00'").list();
-    for (ContactData contact : result) {
-      System.out.println("ContactID = " + contact.getId());
-      System.out.println("GetGroups = " + contact.getGroups());
-      System.out.println("GetGroups.size = " + contact.getGroups().size());
-    }
-    session.getTransaction().commit();
-    session.close();
-
-    //*************************************
-
-
     app.contact().HomePage();
 
     Contacts someContacts = app.db().contacts();
     Groups someGroups = app.db().groups();
 
     if (someGroups.size() == 0) {
-      addNewGroup("additionalGroup");
+      app.group().createGroup(new GroupData().withName("test_group").withHeader("test2").withFooter("test1"));
+      //addNewGroup("additionalGroup");
     }
 
     search:
@@ -67,39 +51,25 @@ public class ContactAddToGroupTests extends TestBase {
 
         if (!app.contact().isContactInGroup(selectedContact, selectedGroup)) {
 
-          app.contact().findContactByID(selectedContact.getId());
-          app.contact().initAddToGroup();
+          app.contact().addToGroup(selectedContact.getId(), selectedGroup.getId(), selectedGroup.getName());
 
-          System.out.println("ID выбранного контакта = " + selectedContact.getId());
-          System.out.println("Количество групп для контакта " + selectedContact.getGroups());
-
-          app.contact().selectGroupToAdd(selectedGroup.getName(), selectedGroup.getId());
-          app.contact().addToGroup_Button();
-          app.contact().HomePage();
-
-          System.out.println("Контакт не в группе. Добавляем.****************");
           Assert.assertTrue(!app.contact().isContactInGroup(selectedContact, selectedGroup));
           System.out.println("Контакт добавлен");
 
           break search;
 
         }
-
       }
-
     }
-
-
   }
-
-
+/*
   public void addNewGroup(String groupName) {
     app.contact().HomePage();
     Groups groups = app.db().groups();
 
     app.group().groupPage(); //???
-    app.group().createGroup(new GroupData().withName(groupName));
+    app.group().createGroup(new GroupData().withName("test_group").withHeader("test2").withFooter("test1"));
 
   }
-
+*/
 }

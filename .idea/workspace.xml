@@ -46,6 +46,9 @@
         <task path="$PROJECT_DIR$/mantis-tests">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/rest-sample">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -112,26 +115,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.RestTests.testCreateIssue">
-    <configuration name="RestTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/rest-sample" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;trs.stqa.pft.rest.tests.RestTests&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
+  <component name="RunManager" selected="TestNG.ContactAddToGroupTests.testAddContactToTheGroup">
+    <configuration name="ContactAddToGroupTests.testAddContactToTheGroup" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trs.stqa.pft.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="trs.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.ContactAddToGroupTests" />
+      <option name="METHOD_NAME" value="testAddContactToTheGroup" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="ContactDeletionFromGroupTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
@@ -254,19 +263,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.RestTests" />
       <item itemvalue="TestNG.RestTests" />
       <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
       <item itemvalue="TestNG.changeUserPasswordTests (1)" />
       <item itemvalue="TestNG.RestTests.testCreateIssue" />
+      <item itemvalue="TestNG.ContactAddToGroupTests.testAddContactToTheGroup" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ContactAddToGroupTests.testAddContactToTheGroup" />
+        <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
         <item itemvalue="TestNG.RestTests.testCreateIssue" />
         <item itemvalue="TestNG.RestTests" />
         <item itemvalue="TestNG.changeUserPasswordTests (1)" />
-        <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
-        <item itemvalue="Gradle.RestTests" />
       </list>
     </recent_temporary>
   </component>
@@ -295,11 +304,6 @@
           <url>file://$PROJECT_DIR$/mantis-tests/src/test/java/trs/stqa/pft/mantis/appmanager/HttpSession.java</url>
           <line>37</line>
           <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/trs/stqa/pft/addressbook/tests/ContactDeletionFromGroupTests.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="67" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
