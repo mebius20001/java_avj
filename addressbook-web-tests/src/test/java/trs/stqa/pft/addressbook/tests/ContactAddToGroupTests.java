@@ -6,6 +6,7 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import trs.stqa.pft.addressbook.model.ContactData;
 import trs.stqa.pft.addressbook.model.Contacts;
@@ -30,6 +31,23 @@ public class ContactAddToGroupTests extends TestBase {
       StandardServiceRegistryBuilder.destroy(registry);
     }
   }
+
+  @BeforeMethod
+  public void ensurePreconditions(){
+
+    if(app.db().contacts().size() == 0){
+      app.contact().create(new ContactData().withFirstname("Ivan").withMiddlename("Ivanovich").withLastname("Petrov")
+              .withAddress("21 E Mossovet str").withHomePhone("123456789").withEmail("abc@job.com"), true);
+    }
+
+    if (app.db().groups().size() == 0){
+      app.group().groupPage();
+      app.group().createGroup(new GroupData().withName("test_group").withHeader("test2").withFooter("test1"));
+    }
+    app.group().groupPage();//FFF
+
+  }
+
 
   @Test
   public void testAddContactToTheGroup() {
