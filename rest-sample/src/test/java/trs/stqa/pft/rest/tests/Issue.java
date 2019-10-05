@@ -5,14 +5,10 @@ public class Issue extends TestBase{
   private String subject;
   private  String description;
   private int state;
+  private String state_name;
 
-  public int getState() {
-    return state;
-  }
-
-  public Issue withState(int state) {
-    this.state = state;
-    return this;
+  public String getState_name() {
+    return state_name;
   }
 
   @Override
@@ -22,19 +18,27 @@ public class Issue extends TestBase{
 
     Issue issue = (Issue) o;
 
-    if (id != issue.id) return false;
-    if (state != issue.state) return false;
-    if (subject != null ? !subject.equals(issue.subject) : issue.subject != null) return false;
-    return description != null ? description.equals(issue.description) : issue.description == null;
+    return id == issue.id;
   }
 
   @Override
   public int hashCode() {
-    int result = id;
-    result = 31 * result + (subject != null ? subject.hashCode() : 0);
-    result = 31 * result + (description != null ? description.hashCode() : 0);
-    result = 31 * result + state;
-    return result;
+    return id;
+  }
+
+  public Issue withState_name(String state_name) {
+    this.state_name = state_name;
+    return this;
+  }
+
+
+  public int getState() {
+    return state;
+  }
+
+  public Issue withState(int state) {
+    this.state = state;
+    return this;
   }
 
   public int getId() {

@@ -116,7 +116,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.EquationTests">
+  <component name="RunManager" selected="TestNG.RestTests">
     <configuration name="EquationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="sandbox.test" />
       <extension name="coverage">
@@ -128,6 +128,31 @@
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="trs.stqa.pft.sandbox" />
       <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.sandbox.EquationTests" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="rest-sample.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trs.stqa.pft.rest.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="trs.stqa.pft.rest.tests" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.rest.tests.RestTests" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
@@ -218,45 +243,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="trs.stqa.pft.sandbox" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="mantis-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trs.stqa.pft.sandbox.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="trs.stqa.pft.sandbox" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.LoginTests" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="TestNG.trs.stqa.pft.sandbox" />
       <item itemvalue="TestNG.&lt;default&gt;" />
       <item itemvalue="TestNG.&lt;default&gt; (1)" />
       <item itemvalue="TestNG.&lt;default&gt; (2)" />
       <item itemvalue="TestNG.EquationTests" />
+      <item itemvalue="TestNG.RestTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RestTests" />
         <item itemvalue="TestNG.EquationTests" />
         <item itemvalue="TestNG.&lt;default&gt; (2)" />
         <item itemvalue="TestNG.&lt;default&gt; (1)" />
         <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="TestNG.trs.stqa.pft.sandbox" />
       </list>
     </recent_temporary>
   </component>

@@ -22,10 +22,18 @@ public class TestBase {
 
   boolean isIssueOpen(int issueId) throws IOException {
     Set<Issue> oldIssues = getIssues();
+    String issueStateName = oldIssues.iterator().next().withId(issueId).getState_name();
+    if (issueStateName.equals("Closed")) return false;
+    else return true;
+  }
+
+  boolean isIssueOpenOld(int issueId) throws IOException {//old Version
+    Set<Issue> oldIssues = getIssues();
     int issueState = oldIssues.iterator().next().withId(issueId).getState();
     if (issueState == 2) return false;
     else return true;
   }
+
 
   public Set<Issue> getIssues() throws IOException {
     String json = getExecutor().execute(Request.Get("https://bugify.stqa.ru/api/issues.json?limit=500"))
