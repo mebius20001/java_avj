@@ -33,18 +33,47 @@ public class ContactAddToGroupTests extends TestBase {
   }
 
   @BeforeMethod
-  public void ensurePreconditions(){
+  public void ensurePreconditions() {
 
-    if(app.db().contacts().size() == 0){
+    if (app.db().contacts().size() == 0) {
       app.contact().create(new ContactData().withFirstname("Ivan").withMiddlename("Ivanovich").withLastname("Petrov")
               .withAddress("21 E Mossovet str").withHomePhone("123456789").withEmail("abc@job.com"), true);
     }
 
-    if (app.db().groups().size() == 0){
+    if (app.db().groups().size() == 0) {
       app.group().groupPage();
       app.group().createGroup(new GroupData().withName("test_group").withHeader("test2").withFooter("test1"));
     }
-    app.group().groupPage();//FFF
+    app.group().groupPage();
+  }
+
+
+  @Test
+  public void testAddContactToTheGroupN() {
+    app.contact().HomePage();
+
+    Contacts someContacts = app.db().contacts();
+    Groups someGroups = app.db().groups();
+
+    search:
+    for (GroupData selectedGroup : someGroups) {
+      for (ContactData selectedContact : someContacts) {
+        if (!app.contact().isContactInGroup(selectedContact, selectedGroup)) {
+
+          app.contact().addToGroup(selectedContact.getId(), selectedGroup.getId(), selectedGroup.getName());
+
+          Assert.assertTrue(!app.contact().isContactInGroup(selectedContact, selectedGroup));
+          System.out.println("Контакт добавлен");
+          break search;
+        }
+      }
+    }
+    app.contact().HomePage();
+    app.contact().create(new ContactData().withFirstname("Ivan").withMiddlename("Ivanovich").withLastname("Petrov")
+            .withAddress("21 E Mossovet str").withHomePhone("123456789")
+            .withEmail("abc@job.com").withId(Integer.MAX_VALUE), true);
+
+    app.contact().addToGroup(Integer.MAX_VALUE, someGroups.iterator().next().getId(), someGroups.iterator().next().getName());
 
   }
 
@@ -80,14 +109,6 @@ public class ContactAddToGroupTests extends TestBase {
       }
     }
   }
-/*
-  public void addNewGroup(String groupName) {
-    app.contact().HomePage();
-    Groups groups = app.db().groups();
 
-    app.group().groupPage(); //???
-    app.group().createGroup(new GroupData().withName("test_group").withHeader("test2").withFooter("test1"));
 
-  }
-*/
 }

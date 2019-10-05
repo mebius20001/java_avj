@@ -8,3 +8,7 @@ repositories {
 dependencies{
     compile 'com.slickqa:testng:7.0.0-7'
 }
+
+test{
+    useTestNG()
+}

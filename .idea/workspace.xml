@@ -14,6 +14,7 @@
   <component name="CoverageViewManager">
     <option name="myElementSize" value="209" />
   </component>
+  <component name="ExportTestResults" exportFormat="Xml" outputFolder="$PROJECT_DIR$/sandbox/build/test-results" userTempatePath="" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/addressbook-web-tests">
       <ProjectState />
@@ -76,7 +77,7 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/sandbox/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/rest-sample/.gradle/5.5.1" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.33833835" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
@@ -115,44 +116,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.changeUserPasswordTests (1)">
-    <configuration name="ContactAddToGroupTests.testAddContactToTheGroup" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
+  <component name="RunManager" selected="TestNG.EquationTests">
+    <configuration name="EquationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="sandbox.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="trs.stqa.pft.addressbook.tests.*" />
+          <option name="PATTERN" value="trs.stqa.pft.sandbox.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="trs.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.ContactAddToGroupTests" />
-      <option name="METHOD_NAME" value="testAddContactToTheGroup" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactDeletionFromGroupTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trs.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="trs.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.addressbook.tests.ContactDeletionFromGroupTests" />
+      <option name="PACKAGE_NAME" value="trs.stqa.pft.sandbox" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.sandbox.EquationTests" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
@@ -167,19 +142,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="rest-sample.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trs.stqa.pft.rest.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="&lt;default&gt; (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mantis-tests.test" />
       <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="trs.stqa.pft.rest.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.rest.tests.RestTests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.LoginTests" />
       <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
       <option name="PARAMETERS" value="" />
       <option name="OUTPUT_DIRECTORY" value="" />
       <option name="TEST_SEARCH_SCOPE">
@@ -192,20 +161,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestTests.testCreateIssue" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="rest-sample.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trs.stqa.pft.rest.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="&lt;default&gt; (2)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mantis-tests.test" />
       <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="trs.stqa.pft.rest.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.rest.tests.RestTests" />
-      <option name="METHOD_NAME" value="testCreateIssue" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.LoginTests" />
       <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mantis-tests.test" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.LoginTests" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
       <option name="PARAMETERS" value="" />
       <option name="OUTPUT_DIRECTORY" value="" />
       <option name="TEST_SEARCH_SCOPE">
@@ -237,19 +218,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="changeUserPasswordTests (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="trs.stqa.pft.sandbox" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mantis-tests.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="trs.stqa.pft.rest.tests.*" />
+          <option name="PATTERN" value="trs.stqa.pft.sandbox.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="trs.stqa.pft.rest.tests" />
-      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.rest.tests.changeUserPasswordTests" />
+      <option name="PACKAGE_NAME" value="trs.stqa.pft.sandbox" />
+      <option name="MAIN_CLASS_NAME" value="trs.stqa.pft.mantis.tests.LoginTests" />
       <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
       <option name="PARAMETERS" value="" />
       <option name="OUTPUT_DIRECTORY" value="" />
       <option name="TEST_SEARCH_SCOPE">
@@ -263,19 +244,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.RestTests" />
-      <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
-      <item itemvalue="TestNG.changeUserPasswordTests (1)" />
-      <item itemvalue="TestNG.RestTests.testCreateIssue" />
-      <item itemvalue="TestNG.ContactAddToGroupTests.testAddContactToTheGroup" />
+      <item itemvalue="TestNG.trs.stqa.pft.sandbox" />
+      <item itemvalue="TestNG.&lt;default&gt;" />
+      <item itemvalue="TestNG.&lt;default&gt; (1)" />
+      <item itemvalue="TestNG.&lt;default&gt; (2)" />
+      <item itemvalue="TestNG.EquationTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.changeUserPasswordTests (1)" />
-        <item itemvalue="TestNG.ContactAddToGroupTests.testAddContactToTheGroup" />
-        <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
-        <item itemvalue="TestNG.RestTests.testCreateIssue" />
-        <item itemvalue="TestNG.RestTests" />
+        <item itemvalue="TestNG.EquationTests" />
+        <item itemvalue="TestNG.&lt;default&gt; (2)" />
+        <item itemvalue="TestNG.&lt;default&gt; (1)" />
+        <item itemvalue="TestNG.&lt;default&gt;" />
+        <item itemvalue="TestNG.trs.stqa.pft.sandbox" />
       </list>
     </recent_temporary>
   </component>
@@ -316,6 +297,9 @@
     <SUITE FILE_PATH="coverage/sandbox$LoginTests.ic" NAME="LoginTests Coverage Results" MODIFIED="1569214313070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/sandbox$ContactCreationTests.ic" NAME="ContactCreationTests Coverage Results" MODIFIED="1566012500187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>trs.stqa.pft.addressbook.tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/sandbox$trs_stqa_pft_sandbox.ic" NAME="trs.stqa.pft.sandbox Coverage Results" MODIFIED="1570235641028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>trs.stqa.pft.sandbox.*</FILTER>
     </SUITE>
   </component>
 </project>
