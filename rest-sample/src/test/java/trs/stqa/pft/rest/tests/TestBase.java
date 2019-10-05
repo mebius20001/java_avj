@@ -23,7 +23,7 @@ public class TestBase {
   boolean isIssueOpen(int issueId) throws IOException {
     Set<Issue> oldIssues = getIssues();
     String issueStateName = oldIssues.iterator().next().withId(issueId).getState_name();
-    if (issueStateName.equals("Closed")) return false;
+    if (issueStateName.equals("Closed") || issueStateName.equals("Resolved") ) return false;
     else return true;
   }
 
