@@ -76,7 +76,7 @@
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/mantis-tests/src/test/java/trs/stqa/pft/mantis/tests" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/sandbox/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/rest-sample/.gradle/5.5.1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/addressbook-web-tests/src/test/resources" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.33833835" />
