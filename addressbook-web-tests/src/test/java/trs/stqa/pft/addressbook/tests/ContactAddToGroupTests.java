@@ -48,7 +48,7 @@ public class ContactAddToGroupTests extends TestBase {
   }
 
 
-  @Test
+  @Test(enabled = false)
   public void testAddContactToTheGroupN() {
     app.contact().HomePage();
 

@@ -24,7 +24,7 @@ public class ContactDeletionFromGroupTests extends TestBase {
   }
 
 
-  @Test(enabled = true)
+  @Test(enabled = false)
   public void testContactDeletionFromGroup2() {
 
     app.contact().HomePage();
