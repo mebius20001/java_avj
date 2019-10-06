@@ -241,7 +241,7 @@ public class ContactHelper extends HelperBase{
     for (GroupData groupFromContact : contact2){
       if (groupFromContact.getId() == selectedGroup.getId()) {
 
-        System.out.println("ИД РАВНЫ КОНТАКТ УЖЕ В ГРУППЕ!!!!!");
+        System.out.println("contact ALREADY in Group!!!!!");
         System.out.println(groupFromContact.getId() + " = " + selectedGroup.getId());
         System.out.println(groupFromContact.getName() + " = " + selectedGroup.getName());
         return Boolean.TRUE;
