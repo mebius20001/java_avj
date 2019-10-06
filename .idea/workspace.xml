@@ -83,25 +83,25 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="trs.stqa.pft.mantis" />
-      <recent name="trs.stqa.pft.sandbox" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Igor\Documents\GitHub\java_avj\mantis-tests\src\test\resources" />
-      <recent name="C:\Users\Igor\Documents\GitHub\java_avj\addressbook-web-tests\src\test\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="trs.stqa.pft.rest.tests" />
-      <recent name="trs.stqa.pft.mantis.tests" />
-      <recent name="trs.stqa.pft.mantis.appmanager" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="trs.stqa.pft.rest.tests" />
       <recent name="trs.stqa.pft.mantis.appmanager" />
       <recent name="trs.stqa.pft.addressbook.appmanager" />
       <recent name="contacts.appmanager" />
       <recent name="contacts" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="trs.stqa.pft.mantis" />
+      <recent name="trs.stqa.pft.sandbox" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="trs.stqa.pft.rest.tests" />
+      <recent name="trs.stqa.pft.mantis.tests" />
+      <recent name="trs.stqa.pft.mantis.appmanager" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Igor\Documents\GitHub\java_avj\addressbook-web-tests\src\test\resources" />
+      <recent name="C:\Users\Igor\Documents\GitHub\java_avj\mantis-tests\src\test\resources" />
     </key>
   </component>
   <component name="RunDashboard">
