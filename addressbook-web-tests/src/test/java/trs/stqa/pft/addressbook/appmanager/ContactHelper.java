@@ -72,10 +72,6 @@ public class ContactHelper extends HelperBase{
     HomePage();
   }
 
-
-
-
-
   public void HomePage() {
     if (isElementPresent(By.id("maintable")) ) {
       return;
@@ -193,12 +189,19 @@ public class ContactHelper extends HelperBase{
   }
 
 //**********************************
+  public void selectGroupToRemove(String groupName, Integer GroupID) {
+  HomePage();
+  new Select(wd.findElement(By.name("group"))).selectByVisibleText(groupName);
+  wd.findElement(By.xpath("(//option[@value=" + GroupID + " ])[2]")).click();
+    //closeAlertWindow();
+}
+
 
   public void selectGroupFromDropDownMenu(String groupName){
     new Select(wd.findElement(By.name("group"))).selectByVisibleText(groupName);
   }
 
-  public void removeSelectedContactFromGroup(){
+  public void removeFromButton(){
     wd.findElement(By.name("remove")).click();
   }
 
@@ -209,18 +212,24 @@ public class ContactHelper extends HelperBase{
 
 
   public void addToGroup(Integer contactId, Integer groupId, String groupName){
-
+     HomePage();
     findContactByID(contactId);
     initAddToGroup();
     selectGroupToAdd(groupName, groupId);
     addToGroup_Button();
-    HomePage();
   }
+
+  public void removeFromGroup(Integer contactId, Integer groupId, String groupName){
+    selectGroupToRemove(groupName, groupId);
+    findContactByID(contactId);
+    removeFromButton();
+  }
+
 
   public void removeFromGroup(String groupName, Integer contactId){
     selectGroupFromDropDownMenu(groupName);
     selectContactById(contactId);
-    removeSelectedContactFromGroup();
+    removeFromButton();
    // switchToAllGroupsDropDownMenu();
   }
 

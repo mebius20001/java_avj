@@ -47,66 +47,52 @@ public class ContactAddToGroupTests extends TestBase {
     app.group().groupPage();
   }
 
-
-  @Test(enabled = false)
+  @Test(enabled = true)
   public void testAddContactToTheGroupN() {
     app.contact().HomePage();
 
+
+
     Contacts someContacts = app.db().contacts();
     Groups someGroups = app.db().groups();
+    Boolean contactAdded = false;
+
+    long now = System.currentTimeMillis();
+    String user = String.format("user%s", now);
 
     search:
     for (GroupData selectedGroup : someGroups) {
       for (ContactData selectedContact : someContacts) {
         if (!app.contact().isContactInGroup(selectedContact, selectedGroup)) {
-
+          Groups before = selectedContact.getGroups();
           app.contact().addToGroup(selectedContact.getId(), selectedGroup.getId(), selectedGroup.getName());
 
           Assert.assertTrue(!app.contact().isContactInGroup(selectedContact, selectedGroup));
-          System.out.println("Контакт добавлен");
+          Groups after = selectedContact.getGroups();
+         // Assert.assertTrue(before.size() == after.size() -1 );
+          System.out.println("Contact added to the Group !!");
+          contactAdded = true;
           break search;
         }
       }
     }
-    app.contact().HomePage();
-    app.contact().create(new ContactData().withFirstname("Ivan").withMiddlename("Ivanovich").withLastname("Petrov")
-            .withAddress("21 E Mossovet str").withHomePhone("123456789")
-            .withEmail("abc@job.com").withId(Integer.MAX_VALUE), true);
 
-    app.contact().addToGroup(Integer.MAX_VALUE, someGroups.iterator().next().getId(), someGroups.iterator().next().getName());
+    if (!contactAdded){
+      app.contact().HomePage();
+      app.contact().create(new ContactData().withFirstname(user).withMiddlename("Ivanovich").withLastname("Petrov")
+              .withAddress("21 E Mossovet str").withHomePhone("123456789")
+              .withEmail("abc@job.com"), true);
 
-  }
+      ContactData additionalContact = someContacts.iterator().next().withFirstname(user);
+      Integer newId = additionalContact.getId();
+      Groups before = additionalContact.getGroups();
 
+      app.group().groupPage();
+      app.contact().addToGroup(newId, someGroups.iterator().next().getId(), someGroups.iterator().next().getName());
 
-  @Test
-  public void testAddContactToTheGroup() {
-
-    app.contact().HomePage();
-
-    Contacts someContacts = app.db().contacts();
-    Groups someGroups = app.db().groups();
-
-    if (someGroups.size() == 0) {
-      app.group().createGroup(new GroupData().withName("test_group").withHeader("test2").withFooter("test1"));
-      //addNewGroup("additionalGroup");
-    }
-
-    search:
-    for (ContactData selectedContact : someContacts) {
-
-      for (GroupData selectedGroup : someGroups) {
-
-        if (!app.contact().isContactInGroup(selectedContact, selectedGroup)) {
-
-          app.contact().addToGroup(selectedContact.getId(), selectedGroup.getId(), selectedGroup.getName());
-
-          Assert.assertTrue(!app.contact().isContactInGroup(selectedContact, selectedGroup));
-          System.out.println("Контакт добавлен");
-
-          break search;
-
-        }
-      }
+      Groups after = app.db().contacts().iterator().next().withFirstname(user).getGroups();
+      //Assert.assertEquals(before.size(),after.size()-1);
+      System.out.println("Create new contact");
     }
   }
 

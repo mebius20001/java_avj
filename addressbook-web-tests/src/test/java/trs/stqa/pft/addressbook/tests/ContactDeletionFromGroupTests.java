@@ -3,7 +3,9 @@ package trs.stqa.pft.addressbook.tests;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import trs.stqa.pft.addressbook.model.ContactData;
+import trs.stqa.pft.addressbook.model.Contacts;
 import trs.stqa.pft.addressbook.model.GroupData;
+import trs.stqa.pft.addressbook.model.Groups;
 
 public class ContactDeletionFromGroupTests extends TestBase {
 
@@ -19,58 +21,54 @@ public class ContactDeletionFromGroupTests extends TestBase {
       app.group().groupPage();
       app.group().createGroup(new GroupData().withName("test_group").withHeader("test2").withFooter("test1"));
     }
-    app.group().groupPage();//FFF
-
+    app.group().groupPage();
   }
 
 
-  @Test(enabled = false)
-  public void testContactDeletionFromGroup2() {
+  @Test(enabled = true)
+  public void testContactDeletionFromGroupN() {
 
     app.contact().HomePage();
 
-    if (app.db().groups().size() == 0) {
-      app.group().createGroup(new GroupData().withName("test_group").withHeader("test2").withFooter("test1"));
+    Contacts someContacts = app.db().contacts();
+    Groups someGroups = app.db().groups();
+    Boolean contactRemoved = false;
+
+    long now = System.currentTimeMillis();
+    String user = String.format("user%s", now);
+    String groupName = String.format("groupName%s", now);
+
+    search:
+    for (GroupData selectedGroup : someGroups) {
+      for (ContactData selectedContact : someContacts) {
+        if (app.contact().isContactInGroup(selectedContact, selectedGroup)) {
+          Groups before = selectedContact.getGroups();
+          app.contact().removeFromGroup(selectedContact.getId(),selectedGroup.getId(),selectedGroup.getName());
+          Groups after = selectedContact.getGroups();
+          // Assert.assertTrue(before.size() == after.size() + 1 );
+          System.out.println("Contact removed from the Group !!");
+          contactRemoved = true;
+          break search;
+        }
+      }
     }
-    GroupData selectedGroup = app.db().groups().iterator().next();
-    ContactData selectedContact = app.db().contacts().iterator().next();
 
-    if (selectedGroup.getContacts().size() == 0) {
-      app.contact().addToGroup(selectedContact.getId(), selectedGroup.getId(), selectedGroup.getName());
+    if (!contactRemoved){
+      app.contact().HomePage();
+      app.contact().create(new ContactData().withFirstname(user).withMiddlename("Ivanovich").withLastname("Petrov")
+              .withAddress("21 E Mossovet str").withHomePhone("123456789")
+              .withEmail("abc@job.com"), true);
+
+      Integer newId = someContacts.iterator().next().withFirstname(user).getId();
+      String newGroupName = someGroups.iterator().next().getName();
+      Integer newGroupId = someGroups.iterator().next().getId();
+
+      Groups before = app.db().contacts().iterator().next().withFirstname(user).getGroups();
+      app.contact().addToGroup(newId, newGroupId, newGroupName);
+      app.contact().removeFromGroup(newId, newGroupId, newGroupName);
+      Groups after = app.db().contacts().iterator().next().withFirstname(user).getGroups();
+      //Assert.assertEquals(before.size(),after.size()+1);
     }
-    app.contact().removeFromGroup(selectedGroup.getName(), selectedContact.getId());
   }
-
-
-
-
-  @Test(enabled = false)
-  public void testContactDeletionFromGroup() {
-
-    app.contact().HomePage();
-
-    ContactData selectedContact = app.db().contacts().iterator().next();
-    GroupData selectedGroup = app.db().groups().iterator().next();
-
-    selectedContact.getGroups();
-    selectedGroup.getContacts();
-
-    // System.out.println("groupName= " + selectedGroup.getName());
-    // System.out.println("SelectedContact ID = " + selectedContact.getId());
-
-
-    app.contact().selectGroupFromDropDownMenu(selectedGroup.getName());
-
-    app.contact().selectContactById(selectedContact.getId()); ///нет контакта в группе
-
-    app.contact().removeSelectedContactFromGroup();
-
-    app.contact().switchToAllGroupsDropDownMenu();
-    System.out.println("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
-
-    //  if (someGroups.size() == 0) {
-    //   addNewGroup("additionalGroup");  }
-  }
-
 
 }
