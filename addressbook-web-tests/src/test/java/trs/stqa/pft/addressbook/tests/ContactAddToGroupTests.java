@@ -47,13 +47,32 @@ public class ContactAddToGroupTests extends TestBase {
     app.group().groupPage();
   }
 
-  @Test(enabled = true)
+  @Test(enabled = false)
   public void testAddContactToTheGroupN() {
+
+    ContactData contact = app.db().contacts().iterator().next();
+    Groups someGroups2 = app.db().groups();
+
+   // boolean bb = someGroups2.removeAll(app.db().contact.getGroups());       //   without(contact.getGroups()).stream().map((g)->g.)
+
+    System.out.println("Contact.getGroups =" + contact.getGroups());
+    System.out.println("Список групп из БД оригинальный = " + app.db().groups());
+    System.out.println("Список групп без контактов из группы =" + someGroups2);
+
+
+
+
+
+
+
+
+
     app.contact().HomePage();
 
 
 
     Contacts someContacts = app.db().contacts();
+
     Groups someGroups = app.db().groups();
     Boolean contactAdded = false;
 
