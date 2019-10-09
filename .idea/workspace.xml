@@ -77,31 +77,31 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/sandbox/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/addressbook-web-tests/src/test/resources" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.33833835" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="trs.stqa.pft.rest.tests" />
-      <recent name="trs.stqa.pft.mantis.appmanager" />
-      <recent name="trs.stqa.pft.addressbook.appmanager" />
-      <recent name="contacts.appmanager" />
-      <recent name="contacts" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="trs.stqa.pft.mantis" />
       <recent name="trs.stqa.pft.sandbox" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Igor\Documents\GitHub\java_avj\addressbook-web-tests\src\test\resources" />
+      <recent name="C:\Users\Igor\Documents\GitHub\java_avj\mantis-tests\src\test\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="trs.stqa.pft.rest.tests" />
       <recent name="trs.stqa.pft.mantis.tests" />
       <recent name="trs.stqa.pft.mantis.appmanager" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Igor\Documents\GitHub\java_avj\addressbook-web-tests\src\test\resources" />
-      <recent name="C:\Users\Igor\Documents\GitHub\java_avj\mantis-tests\src\test\resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="trs.stqa.pft.rest.tests" />
+      <recent name="trs.stqa.pft.mantis.appmanager" />
+      <recent name="trs.stqa.pft.addressbook.appmanager" />
+      <recent name="contacts.appmanager" />
+      <recent name="contacts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -299,19 +299,14 @@
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/trs/stqa/pft/addressbook/tests/ContactAddToGroupTests.java</url>
-          <line>112</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/trs/stqa/pft/addressbook/tests/ContactDeletionFromGroupTests.java</url>
           <line>69</line>
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/trs/stqa/pft/addressbook/tests/ContactAddToGroupTests.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="70" />
+          <line>87</line>
+          <option name="timeStamp" value="79" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
