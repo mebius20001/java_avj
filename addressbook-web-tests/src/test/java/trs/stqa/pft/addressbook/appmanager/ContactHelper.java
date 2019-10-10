@@ -173,7 +173,7 @@ public class ContactHelper extends HelperBase{
   public void findContactByID(Integer id) {
   //  wd.findElement(By.id(String.valueOf(id))).click();
     String ids = String.valueOf(id);
-    System.out.println(ids);
+    //System.out.println(ids);
 
     wd.findElement(By.id( ids )).click();
   }
@@ -212,7 +212,7 @@ public class ContactHelper extends HelperBase{
 
 
   public void addToGroup(Integer contactId, Integer groupId, String groupName){
-     HomePage();
+   //  HomePage(); //????
     findContactByID(contactId);
     initAddToGroup();
     selectGroupToAdd(groupName, groupId);

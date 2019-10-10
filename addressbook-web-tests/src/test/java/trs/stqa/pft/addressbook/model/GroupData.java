@@ -55,8 +55,8 @@ public class GroupData {
   private  String footer;
 
   public Set<ContactData> getContacts() {
-     return new Contacts();
-     //return contacts;
+     //return new Contacts();
+     return contacts;
     // return new Contacts(contacts);
   }
 

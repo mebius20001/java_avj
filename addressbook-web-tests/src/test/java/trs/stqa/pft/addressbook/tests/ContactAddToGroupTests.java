@@ -12,11 +12,14 @@ import trs.stqa.pft.addressbook.model.Contacts;
 import trs.stqa.pft.addressbook.model.GroupData;
 import trs.stqa.pft.addressbook.model.Groups;
 
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 public class ContactAddToGroupTests extends TestBase {
   public SessionFactory sessionFactory;
-  public Integer contactId = null;
-  public Integer groupId = null;
-  public String groupName = null;
+  public Integer contactId = 0;
+  public Integer groupId = 0;
+  public String groupName = "";
 
 
   @BeforeClass
@@ -35,23 +38,7 @@ public class ContactAddToGroupTests extends TestBase {
     }
   }
 
-  /*
-    @BeforeMethod
-    public void ensurePreconditions() {
 
-      if (app.db().contacts().size() == 0) {
-        app.contact().create(new ContactData().withFirstname("Ivan").withMiddlename("Ivanovich").withLastname("Petrov")
-                .withAddress("21 E Mossovet str").withHomePhone("123456789").withEmail("abc@job.com"), true);
-      }
-
-      if (app.db().groups().size() == 0) {
-        app.group().groupPage();
-        app.group().createGroup(new GroupData().withName("test_group").withHeader("test2").withFooter("test1"));
-      }
-      app.group().groupPage();
-    }
-
-   */
   @BeforeMethod
   public void ensurePreconditions() {
 
@@ -68,11 +55,11 @@ public class ContactAddToGroupTests extends TestBase {
 
         stopCycle:
         for (ContactData selectedContact : allContacts) {
-          Groups withoutGroups = allGroups;
+          Groups withoutGroups = new Groups(allGroups);// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
           boolean wGroup = withoutGroups.removeAll(selectedContact.getGroups());
 
-          System.out.println("withoutGroups.size()= " + withoutGroups.size() );
+          System.out.println("withoutGroups.size()= " + withoutGroups.size());
           if (withoutGroups.size() != 0) {
             GroupData nextGroup = withoutGroups.iterator().next();
             contactId = selectedContact.getId();
@@ -85,9 +72,8 @@ public class ContactAddToGroupTests extends TestBase {
       }
     }
 
-  }
 
-  //***************************************************************************************************
+  }
 
   @Test(enabled = true)
   public void testAddContactToTheGroupN() {
@@ -99,14 +85,14 @@ public class ContactAddToGroupTests extends TestBase {
     Contacts allContacts = app.db().contacts();
     Groups allGroups = app.db().groups();
 
-    if (groupId == 0) {
+    if (groupId == 0 && allGroups.size() == 0) {
       app.group().groupPage();
       app.group().createGroup(new GroupData().withName(group).withHeader("test2").withFooter("test1"));
       groupName = group;
       groupId = allGroups.iterator().next().withName(group).getId();
 
     } else {
-      if (contactId == 0) {
+      if (contactId == 0 && allContacts.size() == 0) {
 
         app.contact().HomePage();
         app.contact().create(new ContactData().withFirstname(user).withMiddlename("Ivanovich").withLastname("Petrov")
@@ -115,9 +101,25 @@ public class ContactAddToGroupTests extends TestBase {
         contactId = allContacts.iterator().next().withFirstname(user).getId();
 
       } else {
-        app.contact().addToGroup(contactId, groupId, groupName);
-        // добавить контакт в группу с известными данными
+
+        ContactData selectNewContact = allContacts.iterator().next();
+        GroupData selectedNewGroup = allGroups.iterator().next();
+        contactId = selectNewContact.getId();
+        groupId = selectedNewGroup.getId();
+        groupName = selectedNewGroup.getName();
+
       }
+      Groups before = app.db().contacts().iterator().next().withId(contactId).getGroups();
+      System.out.println("Before = " + before);
+
+      app.contact().addToGroup(contactId, groupId, groupName);
+      System.out.println("Contact added to the group " + groupName);
+
+      Groups after = app.db().contacts().iterator().next().withId(contactId).getGroups();
+      System.out.println("AFTER = " + after);
+
+      GroupData deletedContactGroups = allGroups.iterator().next().withId(groupId);
+      assertThat(after, equalTo(before.withAdded(deletedContactGroups)));
     }
   }
 

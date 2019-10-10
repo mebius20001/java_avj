@@ -116,7 +116,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ContactAddToGroupTests">
+  <component name="RunManager" selected="TestNG.ContactDeletionFromGroupTests">
     <configuration name="ContactAddToGroupTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -264,8 +264,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ContactAddToGroupTests" />
         <item itemvalue="TestNG.ContactDeletionFromGroupTests" />
+        <item itemvalue="TestNG.ContactAddToGroupTests" />
         <item itemvalue="TestNG.RestTests" />
         <item itemvalue="TestNG.EquationTests" />
         <item itemvalue="TestNG.&lt;default&gt; (2)" />
@@ -297,16 +297,6 @@
           <url>file://$PROJECT_DIR$/mantis-tests/src/test/java/trs/stqa/pft/mantis/appmanager/HttpSession.java</url>
           <line>37</line>
           <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/trs/stqa/pft/addressbook/tests/ContactDeletionFromGroupTests.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/trs/stqa/pft/addressbook/tests/ContactAddToGroupTests.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="79" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
