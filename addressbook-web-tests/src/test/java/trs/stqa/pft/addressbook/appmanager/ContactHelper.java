@@ -23,6 +23,7 @@ public class ContactHelper extends HelperBase{
     initContactCreation();
     fillContactForm(contact, creation);
     submitContactCreation();
+    //closeAlertWindow();
   }
 
   public void createInGroup(String groupName, ContactData contact, boolean creation) {
@@ -212,7 +213,7 @@ public class ContactHelper extends HelperBase{
 
 
   public void addToGroup(Integer contactId, Integer groupId, String groupName){
-   //  HomePage(); //????
+    HomePage(); //????
     findContactByID(contactId);
     initAddToGroup();
     selectGroupToAdd(groupName, groupId);
@@ -220,6 +221,7 @@ public class ContactHelper extends HelperBase{
   }
 
   public void removeFromGroup(Integer contactId, Integer groupId, String groupName){
+    HomePage();
     selectGroupToRemove(groupName, groupId);
     findContactByID(contactId);
     removeFromButton();
