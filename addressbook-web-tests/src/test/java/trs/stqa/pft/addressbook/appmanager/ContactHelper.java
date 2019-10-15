@@ -262,5 +262,27 @@ public class ContactHelper extends HelperBase{
   }
 
 
+  public ContactData findWithId(Integer id, Contacts contacts){
+
+    for (ContactData contact : contacts ){
+      if (contact.getId() == id){
+        System.out.println(" contact.getId()  =" + contact.getId());
+        return contact;
+      }
+    }
+    return null;
+  }
+
+  public ContactData findWithName(String name, Contacts contacts){
+
+    for (ContactData contact : contacts ){
+      if (name.equals(contact.getFirstname())){
+
+        return contact;
+      }
+    }
+    return null;
+  }
+
 
 }

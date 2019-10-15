@@ -20,6 +20,8 @@ public class ContactAddToGroupTests extends TestBase {
   public Integer contactId = 0;
   public Integer groupId = 0;
   public String groupName = "";
+  public Boolean noContacts = true;
+  public boolean noGroups = true;
 
 
   @BeforeClass
@@ -41,41 +43,42 @@ public class ContactAddToGroupTests extends TestBase {
 
   @BeforeMethod
   public void ensurePreconditions() {
-
-    if (app.db().contacts().size() == 0) {
-      contactId = 0;
+    if (app.db().groups().size() == 0) {
+      noGroups = true;
     } else {
-      if (app.db().groups().size() == 0) {
-        groupId = 0;
-      } else {
-        app.contact().HomePage();
-
-        Contacts allContacts = app.db().contacts();
-        Groups allGroups = app.db().groups();
-
-        stopCycle:
-        for (ContactData selectedContact : allContacts) {
-          Groups withoutGroups = new Groups(allGroups);// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-          boolean wGroup = withoutGroups.removeAll(selectedContact.getGroups());
-
-          System.out.println("withoutGroups.size()= " + withoutGroups.size());
-          if (withoutGroups.size() != 0) {
-            GroupData nextGroup = withoutGroups.iterator().next();
-            contactId = selectedContact.getId();
-            groupId = nextGroup.getId();
-            groupName = nextGroup.getName();
-
-            break stopCycle;
-          }
-        }
+      noGroups = false;
+      if (app.db().contacts().size() == 0) {
+        noContacts = true;
       }
     }
+
+    app.contact().HomePage();
+
+    Contacts allContacts = app.db().contacts();
+    Groups allGroups = app.db().groups();
+
+    stopCycle:
+    for (ContactData selectedContact : allContacts) {
+      Groups withoutGroups = new Groups(allGroups);
+      boolean wGroup = withoutGroups.removeAll(selectedContact.getGroups());
+
+      if (withoutGroups.size() != 0) {
+        GroupData nextGroup = withoutGroups.iterator().next();
+        contactId = selectedContact.getId();
+        groupId = nextGroup.getId();
+        groupName = nextGroup.getName();
+        noContacts = false;
+        noGroups = false;
+
+        break stopCycle;
+      }
+    }
+
+
   }
 
   @Test(enabled = true)
   public void testContactAdditionToGroup() {
-
     long now = System.currentTimeMillis();
     String user = String.format("user%s", now);
     String group = String.format("group%s", now);
@@ -83,43 +86,43 @@ public class ContactAddToGroupTests extends TestBase {
     Contacts allContacts = app.db().contacts();
     Groups allGroups = app.db().groups();
 
-    if (allGroups.size() <= 0) {
+    if (noGroups) {
       app.group().groupPage();
       app.group().createGroup(new GroupData().withName(group).withHeader("test2").withFooter("test1"));
+      System.out.println("-------------------------------------------------------------------------------------------");
+      System.out.println("new group created");
+      groupId = app.group().findWithName(group, app.db().groups()).getId();
+      groupName = group; //group
     }
-
-    if ((contactId == 0 && groupId ==  0) || allContacts.size() <= 0 ) {
-
+    if (contactId == 0 || noContacts) {
 
       app.contact().HomePage();
       app.contact().create(new ContactData().withFirstname(user).withMiddlename("Ivanovich").withLastname("Petrov")
               .withAddress("21 E Mossovet str").withHomePhone("123456789")
               .withEmail("abc@job.com"), true);
+      contactId = app.contact().findWithName(user, app.db().contacts()).getId();
 
-      contactId = app.db().contacts().iterator().next().withFirstname(user).getId();
+      GroupData somegroup = app.db().groups().iterator().next();
+      groupName = somegroup.getName();
+      groupId = somegroup.getId();
 
+      System.out.println("-------------------------------------------------------------------------------------------");
+      System.out.println("new contact created");
     }
 
-      app.contact().HomePage();
-      ContactData selectNewContact = app.db().contacts().iterator().next();
-      contactId = selectNewContact.getId();
-      GroupData selectedNewGroup = app.db().groups().iterator().next();
-      groupId = selectedNewGroup.getId();
-      groupName = selectedNewGroup.getName();
+    app.contact().HomePage();
 
+    GroupData additionalGroup = app.group().findWithId(groupId, app.db().groups());
+    ContactData additionalContact = app.contact().findWithId(contactId, app.db().contacts());
+    System.out.println(additionalContact);
 
-      Groups before = app.db().contacts().iterator().next().withId(contactId).getGroups();
-      System.out.println("Before = " + before);
+    Groups before = additionalContact.getGroups();
 
-      app.contact().addToGroup(contactId, groupId, groupName); //добавляем контакт в группу
-      System.out.println("Contact added to the group " + groupName);
+    app.contact().addToGroup(contactId, groupId, groupName); //добавляем контакт в группу
 
-      Groups after = app.db().contacts().iterator().next().withId(contactId).getGroups();
-      System.out.println("AFTER = " + after);
+    Groups after = additionalContact.getGroups();
 
-      GroupData addedContactGroups = allGroups.iterator().next().withId(groupId);
-      assertThat(before, equalTo(after.without(addedContactGroups)));
+    assertThat(before, equalTo(after.without(additionalGroup)));
   }
-
 
 }

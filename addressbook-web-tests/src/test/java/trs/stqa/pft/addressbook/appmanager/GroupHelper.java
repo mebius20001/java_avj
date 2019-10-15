@@ -118,5 +118,22 @@ public class GroupHelper extends HelperBase  {
     return new Groups(groupCache);
   }
 
+  public GroupData findWithId(Integer id, Groups groups){
+
+    for (GroupData group : groups ){
+      if (group.getId() == id){
+        return group;
+      }
+    }    return null;
+  }
+
+  public GroupData findWithName(String name, Groups groups){
+
+    for (GroupData group : groups ){
+      if (name.equals(group.getName())){
+        return group;
+      }
+    }    return null;
+  }
 
 }
